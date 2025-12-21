@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-neutral-800);
+
+  --color-primary: var(--color-blue-500);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-neutral-100);
+  --color-secondary-foreground: var(--color-neutral-800);
+
+  --color-border: var(--color-neutral-200);
+  --color-surface: var(--color-neutral-100);
+  --color-surface-foreground: var(--color-neutral-800);
+
+  --color-error: var(--color-red-600);
+  --color-error-foreground: var(--color-white);
+  --color-success: var(--color-green-600);
+  --color-success-foreground: var(--color-white);
+  --color-warning: var(--color-amber-500);
+  --color-warning-foreground: var(--color-white);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius: 0.625rem;
+  --shape: "squircle"; /* round | squircle */
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+.dark {
+  --color-background: var(--color-black);
+  --color-foreground: var(--color-neutral-400);
+
+  --color-primary: var(--color-blue-500);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-neutral-900);
+  --color-secondary-foreground: var(--color-neutral-200);
+
+  --color-border: var(--color-neutral-800);
+  --color-surface: var(--color-neutral-900);
+  --color-surface-foreground: var(--color-neutral-200);
+
+  --color-error: var(--color-red-600);
+  --color-error-foreground: var(--color-white);
+  --color-success: var(--color-green-600);
+  --color-success-foreground: var(--color-white);
+  --color-warning: var(--color-amber-500);
+  --color-warning-foreground: var(--color-white);
+}
+
+body {
+  @apply relative;
+}
+
+.root {
+  @apply isolate;
+}
