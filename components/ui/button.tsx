@@ -4,14 +4,14 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-primary focus-visible:ring-primary/50 focus-visible:ring-3",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium [corner-shape:var(--shape)] transition-all disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-primary/50 focus-visible:ring-3",
   {
     variants: {
       variant: {
         default:
-          "bg-primary border-primary text-primary-foreground not-disabled:hover:bg-primary/90",
+          "bg-primary text-primary-foreground not-disabled:hover:bg-primary/90",
         secondary:
-          "bg-secondary border-secondary text-secondary-foreground not-disabled:hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground not-disabled:hover:bg-secondary/80",
         outline:
           "border bg-transparent text-surface-foreground not-disabled:hover:bg-surface/50",
         ghost:
@@ -20,22 +20,15 @@ const buttonVariants = cva(
       size: {
         default: "h-10 px-4 has-[>svg]:px-3",
         sm: "h-8 gap-1.5 px-3 rounded-sm has-[>svg]:px-2.5 [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-12 rounded-lg text-base px-5 has-[>svg]:px-4 [&_svg:not([class*='size-'])]:size-5",
+        lg: "h-12 text-base px-5 has-[>svg]:px-4 [&_svg:not([class*='size-'])]:size-5",
         icon: "size-10",
         "icon-sm": "size-8 rounded-sm",
-        "icon-lg": "size-12 rounded-lg [&_svg:not([class*='size-'])]:size-5",
-      },
-      shape: {
-        default: "",
-        pill: "rounded-full",
-        square: "rounded-none",
-        squircle: "[corner-shape:squircle] rounded-full",
+        "icon-lg": "size-12 [&_svg:not([class*='size-'])]:size-5",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
-      shape: "default",
     },
   },
 );
@@ -44,7 +37,6 @@ function Button({
   className,
   variant = "default",
   size = "default",
-  shape = "default",
   ...props
 }: ButtonProps & VariantProps<typeof buttonVariants>) {
   return (
@@ -52,7 +44,7 @@ function Button({
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ variant, size, shape, className }))}
+      className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />
   );
