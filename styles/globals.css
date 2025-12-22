@@ -61,6 +61,7 @@
   * {
     border-color: var(--color-border);
     outline-color: var(--color-primary);
+    @apply focus-visible:ring-primary/50 outline-none focus-visible:ring-3;
   }
 
   body {
