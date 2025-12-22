@@ -45,8 +45,7 @@ function useAccordionContext() {
 function Accordion({
   variant = "default",
   ...props
-}: React.ComponentProps<typeof BuiAccordion.Root> &
-  VariantProps<typeof accordionItemVariants>) {
+}: BuiAccordion.Root.Props & VariantProps<typeof accordionItemVariants>) {
   return (
     <AccordionContext.Provider value={{ variant }}>
       <BuiAccordion.Root data-slot="accordion" {...props} />
@@ -54,10 +53,7 @@ function Accordion({
   );
 }
 
-function AccordionItem({
-  className,
-  ...props
-}: React.ComponentProps<typeof BuiAccordion.Item>) {
+function AccordionItem({ className, ...props }: BuiAccordion.Item.Props) {
   const { variant } = useAccordionContext();
 
   return (
@@ -74,7 +70,7 @@ function AccordionTrigger({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof BuiAccordion.Trigger>) {
+}: BuiAccordion.Trigger.Props) {
   return (
     <BuiAccordion.Header
       data-slot="accordion-header"
@@ -102,7 +98,7 @@ function AccordionPanel({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof BuiAccordion.Panel>) {
+}: BuiAccordion.Panel.Props) {
   return (
     <BuiAccordion.Panel
       data-slot="accordion-panel"

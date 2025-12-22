@@ -1,4 +1,4 @@
-import { Button as BuiButton, type ButtonProps } from "@base-ui/react/button";
+import { Button as BuiButton } from "@base-ui/react/button";
 
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -38,7 +38,7 @@ function Button({
   variant = "default",
   size = "default",
   ...props
-}: ButtonProps & VariantProps<typeof buttonVariants>) {
+}: BuiButton.Props & VariantProps<typeof buttonVariants>) {
   return (
     <BuiButton
       data-slot="button"
