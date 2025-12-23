@@ -4,21 +4,31 @@
   --color-background: var(--color-white);
   --color-foreground: var(--color-neutral-800);
 
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--color-neutral-800);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-neutral-800);
+
   --color-primary: var(--color-blue-500);
   --color-primary-foreground: var(--color-white);
   --color-secondary: var(--color-neutral-100);
   --color-secondary-foreground: var(--color-neutral-800);
 
-  --color-border: var(--color-neutral-200);
-  --color-surface: var(--color-neutral-100);
-  --color-surface-foreground: var(--color-neutral-800);
+  --color-muted: var(--color-neutral-100);
+  --color-muted-foreground: var(--color-neutral-600);
+  --color-accent: var(--color-neutral-100);
+  --color-accent-foreground: var(--color-neutral-800);
 
-  --color-error: var(--color-red-600);
-  --color-error-foreground: var(--color-white);
+  --color-border: var(--color-neutral-200);
+  --color-input: var(--color-neutral-200);
+  --color-ring: var(--color-blue-300);
+
+  --color-destructive: var(--color-red-500);
+  --color-destructive-foreground: var(--color-red-800);
   --color-success: var(--color-green-600);
-  --color-success-foreground: var(--color-white);
+  --color-success-foreground: var(--color-green-800);
   --color-warning: var(--color-amber-500);
-  --color-warning-foreground: var(--color-white);
+  --color-warning-foreground: var(--color-amber-800);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -37,31 +47,41 @@
 }
 
 .dark {
-  --color-background: var(--color-black);
-  --color-foreground: var(--color-neutral-400);
+  --color-background: var(--color-neutral-950);
+  --color-foreground: var(--color-neutral-200);
+
+  --color-card: var(--color-neutral-950);
+  --color-card-foreground: var(--color-neutral-200);
+  --color-popover: var(--color-neutral-950);
+  --color-popover-foreground: var(--color-neutral-200);
 
   --color-primary: var(--color-blue-500);
   --color-primary-foreground: var(--color-white);
   --color-secondary: var(--color-neutral-900);
   --color-secondary-foreground: var(--color-neutral-200);
 
-  --color-border: var(--color-neutral-800);
-  --color-surface: var(--color-neutral-900);
-  --color-surface-foreground: var(--color-neutral-200);
+  --color-muted: var(--color-neutral-900);
+  --color-muted-foreground: var(--color-neutral-400);
+  --color-accent: var(--color-neutral-900);
+  --color-accent-foreground: var(--color-neutral-200);
 
-  --color-error: var(--color-red-600);
-  --color-error-foreground: var(--color-white);
-  --color-success: var(--color-green-600);
-  --color-success-foreground: var(--color-white);
+  --color-border: var(--color-neutral-800);
+  --color-input: var(--color-neutral-800);
+  --color-ring: var(--color-blue-200);
+
+  --color-destructive: var(--color-red-500);
+  --color-destructive-foreground: var(--color-red-500);
+  --color-success: var(--color-green-500);
+  --color-success-foreground: var(--color-green-500);
   --color-warning: var(--color-amber-500);
-  --color-warning-foreground: var(--color-white);
+  --color-warning-foreground: var(--color-amber-500);
 }
 
 @layer base {
   * {
     border-color: var(--color-border);
     outline-color: var(--color-primary);
-    @apply focus-visible:ring-primary/50 outline-none focus-visible:ring-3;
+    @apply focus-visible:ring-ring outline-none focus-visible:ring-3;
   }
 
   body {
