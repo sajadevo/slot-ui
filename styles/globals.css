@@ -33,8 +33,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --shape: round;
-  --radius: 0.625rem; /* 10px */
+  --shape: squircle /* round | square | squircle */;
+  --radius: 3rem; /* 10px */
 
   --radius-xs: calc(var(--radius) - 6px); /* 4px */
   --radius-sm: calc(var(--radius) - 4px); /* 6px */
