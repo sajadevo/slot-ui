@@ -4,18 +4,19 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium [corner-shape:var(--shape)] transition-all disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium [corner-shape:var(--shape)] transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
           "bg-primary text-primary-foreground not-disabled:hover:bg-primary/90",
         secondary:
-          "bg-secondary text-secondary-foreground not-disabled:hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground not-disabled:hover:bg-secondary/70",
         outline:
-          "border bg-transparent text-surface-foreground not-disabled:hover:bg-surface/50",
-        ghost:
-          "bg-transparent text-surface-foreground not-disabled:hover:bg-surface",
+          "border bg-transparent text-foreground shadow-xs not-disabled:hover:bg-accent/50",
+        ghost: "bg-transparent text-foreground not-disabled:hover:bg-accent",
+        destructive:
+          "bg-destructive text-white not-disabled:hover:bg-destructive/90",
       },
       size: {
         default: "h-10 px-4 has-[>svg]:px-3",
