@@ -1,6 +1,7 @@
 import { Buttons } from "@/app/sections/buttons";
 import { Accordions } from "@/app/sections/accordions";
 import { AlertDialogs } from "@/app/sections/alert-dialogs";
+import { Avatars } from "@/app/sections/avatars";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Accordions />
       <Buttons />
       <AlertDialogs />
+      <Avatars />
     </div>
   );
 }
