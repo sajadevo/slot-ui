@@ -14,8 +14,8 @@ const accordionItemVariants = cva(
     variants: {
       variant: {
         default: "border-b last:border-b-0",
-        solid: "bg-secondary text-secondary-foreground rounded-lg my-2 px-4",
-        outline: "border text-surface-foreground rounded-lg my-2 px-4",
+        solid: "bg-accent text-accent-foreground rounded-lg my-2 px-4",
+        outline: "border text-foreground rounded-lg shadow-xs my-2 px-4",
       },
     },
     defaultVariants: {
@@ -79,7 +79,7 @@ function AccordionTrigger({
       <BuiAccordion.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "flex flex-1 items-start justify-between gap-4 py-4 text-start text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50",
+          "flex flex-1 items-start justify-between gap-4 py-4 text-start text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50",
           className,
         )}
         {...props}
@@ -102,7 +102,7 @@ function AccordionPanel({
   return (
     <BuiAccordion.Panel
       data-slot="accordion-panel"
-      className="h-(--accordion-panel-height) overflow-hidden text-sm transition-[height] data-ending-style:h-0 data-starting-style:h-0"
+      className="h-(--accordion-panel-height) overflow-hidden text-sm transition-[height] duration-200 data-ending-style:h-0 data-starting-style:h-0"
       {...props}
     >
       <div className={cn("pt-0 pb-4", className)}>{children}</div>
