@@ -4,7 +4,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function Avatars() {
   return (
-    <section className="flex justify-between gap-12 border-b p-12">
+    <section className="flex justify-around gap-12 border-b p-12">
       <div className="flex flex-row flex-wrap items-center gap-12">
         <Avatar size="sm">
           <AvatarImage src="https://github.com/sajadevo.png" alt="@sajadevo" />
