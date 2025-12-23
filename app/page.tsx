@@ -3,6 +3,7 @@ import { Accordions } from "@/app/sections/accordions";
 import { AlertDialogs } from "@/app/sections/alert-dialogs";
 import { Avatars } from "@/app/sections/avatars";
 import { Checkboxes } from "@/app/sections/checkboxes";
+import { Collapsibles } from "@/app/sections/collapsibles";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AlertDialogs />
       <Avatars />
       <Checkboxes />
+      <Collapsibles />
     </div>
   );
 }
