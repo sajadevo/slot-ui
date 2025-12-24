@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 export function AlertDialogs() {
   return (
-    <section className="flex gap-8 border-b p-12">
+    <section className="flex justify-center gap-8 border-b p-12">
       <AlertDialog>
         <AlertDialogTrigger render={<Button />}>
           Open Alert Dialog
