@@ -6,6 +6,7 @@ import { Checkboxes } from "@/app/sections/checkboxes";
 import { Collapsibles } from "@/app/sections/collapsibles";
 import { Dialogs } from "@/app/sections/dialogs";
 import { Inputs } from "@/app/sections/inputs";
+import { Radios } from "@/app/sections/radios";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Collapsibles />
       <Dialogs />
       <Inputs />
+      <Radios />
     </div>
   );
 }
