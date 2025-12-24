@@ -7,6 +7,7 @@ import { Collapsibles } from "@/app/sections/collapsibles";
 import { Dialogs } from "@/app/sections/dialogs";
 import { Inputs } from "@/app/sections/inputs";
 import { Radios } from "@/app/sections/radios";
+import { Switches } from "@/app/sections/switches";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Dialogs />
       <Inputs />
       <Radios />
+      <Switches />
     </div>
   );
 }
