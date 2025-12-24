@@ -4,6 +4,8 @@ import { AlertDialogs } from "@/app/sections/alert-dialogs";
 import { Avatars } from "@/app/sections/avatars";
 import { Checkboxes } from "@/app/sections/checkboxes";
 import { Collapsibles } from "@/app/sections/collapsibles";
+import { Dialogs } from "@/app/sections/dialogs";
+import { Inputs } from "@/app/sections/inputs";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Avatars />
       <Checkboxes />
       <Collapsibles />
+      <Dialogs />
+      <Inputs />
     </div>
   );
 }
