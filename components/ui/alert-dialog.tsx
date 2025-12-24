@@ -54,7 +54,7 @@ function AlertDialogPopup({ className, ...props }: BuiAlertDialog.Popup.Props) {
         <BuiAlertDialog.Popup
           data-slot="alert-dialog-popup"
           className={cn(
-            "bg-popover fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-1/2 gap-6 rounded-[if(style(--shape:squircle):3rem;else:var(--radius-xl))] border p-6 shadow-xl duration-200 [corner-shape:var(--shape)] sm:max-w-lg",
+            "bg-popover fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-1/2 gap-6 rounded-[if(style(--shape:squircle):3rem;else:var(--radius-xl))] border p-6 shadow-xl transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0 sm:max-w-lg",
             className,
           )}
           {...props}
