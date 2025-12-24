@@ -8,6 +8,7 @@ import { Dialogs } from "@/app/sections/dialogs";
 import { Inputs } from "@/app/sections/inputs";
 import { Radios } from "@/app/sections/radios";
 import { Switches } from "@/app/sections/switches";
+import { Progresses } from "@/app/sections/progresses";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Inputs />
       <Radios />
       <Switches />
+      <Progresses />
     </div>
   );
 }
