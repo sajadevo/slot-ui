@@ -4,11 +4,11 @@ import { Collapsible as BuiCollapsible } from "@base-ui/react";
 
 import { cn } from "@/lib/utils";
 
-function Collapsible({ ...props }: BuiCollapsible.Root.Props) {
+function Collapsible(props: BuiCollapsible.Root.Props) {
   return <BuiCollapsible.Root data-slot="collapsible" {...props} />;
 }
 
-function CollapsibleTrigger({ ...props }: BuiCollapsible.Trigger.Props) {
+function CollapsibleTrigger(props: BuiCollapsible.Trigger.Props) {
   return <BuiCollapsible.Trigger data-slot="collapsible-trigger" {...props} />;
 }
 
