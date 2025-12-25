@@ -10,7 +10,7 @@ export function Collapsibles() {
   return (
     <section className="flex items-center justify-center gap-8 border-b p-12">
       <Collapsible>
-        <CollapsibleTrigger className="bg-accent inline-flex items-center gap-2 rounded-lg py-2 pr-4 pl-3 text-sm font-medium data-panel-open:[&_svg]:rotate-180">
+        <CollapsibleTrigger className="bg-accent inline-flex items-center gap-2 rounded-md py-2 pr-4 pl-3 text-sm font-medium data-panel-open:[&_svg]:rotate-180">
           <ChevronDownIcon className="size-4" />
           Show recovery keys
         </CollapsibleTrigger>
