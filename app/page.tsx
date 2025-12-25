@@ -10,6 +10,7 @@ import { Radios } from "@/app/sections/radios";
 import { Switches } from "@/app/sections/switches";
 import { Progresses } from "@/app/sections/progresses";
 import { Popovers } from "@/app/sections/popovers";
+import { Tooltips } from "@/app/sections/tooltips";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
       <Switches />
       <Progresses />
       <Popovers />
-      <div className="h-100" />
+      <Tooltips />
     </div>
   );
 }
