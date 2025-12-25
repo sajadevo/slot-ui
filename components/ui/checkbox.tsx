@@ -14,7 +14,7 @@ function Checkbox({ className, ...props }: BuiCheckbox.Root.Props) {
     <BuiCheckbox.Root
       data-slot="checkbox"
       className={cn(
-        "peer border-input data-checked:bg-primary data-checked:text-primary-foreground data-checked:border-primary focus-visible:border-ring size-5 shrink-0 rounded-sm border shadow-xs outline-none [corner-shape:var(--shape)] disabled:cursor-not-allowed disabled:opacity-50",
+        "peer border-input data-checked:bg-primary data-checked:text-primary-foreground data-checked:border-primary focus-visible:border-primary size-5 shrink-0 rounded-sm border shadow-xs outline-none [corner-shape:var(--shape)] disabled:cursor-not-allowed disabled:opacity-50",
         className,
       )}
       {...props}
