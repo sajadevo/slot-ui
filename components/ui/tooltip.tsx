@@ -74,7 +74,7 @@ function TooltipPopup({
         <TooltipPrimitive.Popup
           data-slot="tooltip-Popup"
           className={cn(
-            "bg-popover text-foreground origin-(--transform-origin) rounded-md border px-2 py-1.5 text-xs shadow-xs transition-all duration-200 data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
+            "bg-popover text-foreground origin-(--transform-origin) rounded-md border px-2 py-1.5 text-xs shadow-xs transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
             className,
           )}
           {...props}
