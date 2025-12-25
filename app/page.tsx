@@ -11,6 +11,7 @@ import { Switches } from "@/app/sections/switches";
 import { Progresses } from "@/app/sections/progresses";
 import { Popovers } from "@/app/sections/popovers";
 import { Tooltips } from "@/app/sections/tooltips";
+import { Sliders } from "@/app/sections/sliders";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Progresses />
       <Popovers />
       <Tooltips />
+      <Sliders />
     </div>
   );
 }
