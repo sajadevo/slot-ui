@@ -9,6 +9,7 @@ import { Inputs } from "@/app/sections/inputs";
 import { Radios } from "@/app/sections/radios";
 import { Switches } from "@/app/sections/switches";
 import { Progresses } from "@/app/sections/progresses";
+import { Popovers } from "@/app/sections/popovers";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
       <Radios />
       <Switches />
       <Progresses />
+      <Popovers />
+      <div className="h-100" />
     </div>
   );
 }
