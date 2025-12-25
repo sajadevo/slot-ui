@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export function Popovers() {
   return (
-    <section className="flex items-center justify-around gap-8 p-12">
+    <section className="flex items-center justify-around gap-8 border-b p-12">
       <Popover>
         <PopoverTrigger render={<Button />}>Open Popover</PopoverTrigger>
         <PopoverPopup>
