@@ -12,6 +12,7 @@ import { Progresses } from "@/app/sections/progresses";
 import { Popovers } from "@/app/sections/popovers";
 import { Tooltips } from "@/app/sections/tooltips";
 import { Sliders } from "@/app/sections/sliders";
+import { TabsDemo } from "@/app/sections/tabs";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <Popovers />
       <Tooltips />
       <Sliders />
+      <TabsDemo />
     </div>
   );
 }
