@@ -13,6 +13,8 @@ import { Popovers } from "@/app/sections/popovers";
 import { Tooltips } from "@/app/sections/tooltips";
 import { Sliders } from "@/app/sections/sliders";
 import { TabsDemo } from "@/app/sections/tabs";
+import { Toggles } from "@/app/sections/toggles";
+import { ToggleGroups } from "@/app/sections/toggle-groups";
 
 export default function Home() {
   return (
@@ -32,6 +34,8 @@ export default function Home() {
       <Tooltips />
       <Sliders />
       <TabsDemo />
+      <Toggles />
+      <ToggleGroups />
     </div>
   );
 }
