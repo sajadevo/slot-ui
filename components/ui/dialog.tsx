@@ -1,35 +1,38 @@
 "use client";
 
 import * as React from "react";
-import { Dialog as BuiDialog } from "@base-ui/react/dialog";
+import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 
 import { XIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-function Dialog(props: BuiDialog.Root.Props) {
-  return <BuiDialog.Root data-slot="dialog" {...props} />;
+function Dialog(props: DialogPrimitive.Root.Props) {
+  return <DialogPrimitive.Root data-slot="dialog" {...props} />;
 }
 
-function DialogTrigger(props: BuiDialog.Trigger.Props) {
-  return <BuiDialog.Trigger data-slot="dialog-trigger" {...props} />;
+function DialogTrigger(props: DialogPrimitive.Trigger.Props) {
+  return <DialogPrimitive.Trigger data-slot="dialog-trigger" {...props} />;
 }
 
-function DialogPortal(props: BuiDialog.Portal.Props) {
-  return <BuiDialog.Portal data-slot="dialog-portal" {...props} />;
+function DialogPortal(props: DialogPrimitive.Portal.Props) {
+  return <DialogPrimitive.Portal data-slot="dialog-portal" {...props} />;
 }
 
-function DialogClose(props: BuiDialog.Close.Props) {
-  return <BuiDialog.Close data-slot="dialog-close" {...props} />;
+function DialogClose(props: DialogPrimitive.Close.Props) {
+  return <DialogPrimitive.Close data-slot="dialog-close" {...props} />;
 }
 
-function DialogViewport(props: BuiDialog.Viewport.Props) {
-  return <BuiDialog.Viewport data-slot="dialog-viewport" {...props} />;
+function DialogViewport(props: DialogPrimitive.Viewport.Props) {
+  return <DialogPrimitive.Viewport data-slot="dialog-viewport" {...props} />;
 }
 
-function DialogBackdrop({ className, ...props }: BuiDialog.Backdrop.Props) {
+function DialogBackdrop({
+  className,
+  ...props
+}: DialogPrimitive.Backdrop.Props) {
   return (
-    <BuiDialog.Backdrop
+    <DialogPrimitive.Backdrop
       data-slot="dialog-backdrop"
       className={cn(
         "fixed inset-0 z-50 min-h-dvh bg-black/50 transition-all duration-150 data-ending-style:opacity-0 data-starting-style:opacity-0 supports-[-webkit-touch-callout:none]:absolute",
@@ -45,14 +48,14 @@ function DialogPopup({
   children,
   showCloseButton = true,
   ...props
-}: BuiDialog.Popup.Props & {
+}: DialogPrimitive.Popup.Props & {
   showCloseButton?: boolean;
 }) {
   return (
     <DialogPortal data-slot="dialog-portal">
       <DialogBackdrop />
       <DialogViewport>
-        <BuiDialog.Popup
+        <DialogPrimitive.Popup
           data-slot="dialog-popup"
           className={cn(
             "bg-popover fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-1/2 gap-6 rounded-[if(style(--shape:squircle):3rem;else:var(--radius-xl))] border p-6 shadow-xl transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0 sm:max-w-lg",
@@ -67,7 +70,7 @@ function DialogPopup({
               <span className="sr-only">Close</span>
             </DialogClose>
           )}
-        </BuiDialog.Popup>
+        </DialogPrimitive.Popup>
       </DialogViewport>
     </DialogPortal>
   );
@@ -96,9 +99,9 @@ function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function DialogTitle({ className, ...props }: BuiDialog.Title.Props) {
+function DialogTitle({ className, ...props }: DialogPrimitive.Title.Props) {
   return (
-    <BuiDialog.Title
+    <DialogPrimitive.Title
       data-slot="dialog-title"
       className={cn("text-lg leading-none font-semibold", className)}
       {...props}
@@ -109,9 +112,9 @@ function DialogTitle({ className, ...props }: BuiDialog.Title.Props) {
 function DialogDescription({
   className,
   ...props
-}: BuiDialog.Description.Props) {
+}: DialogPrimitive.Description.Props) {
   return (
-    <BuiDialog.Description
+    <DialogPrimitive.Description
       data-slot="dialog-description"
       className={cn("text-muted-foreground text-base", className)}
       {...props}

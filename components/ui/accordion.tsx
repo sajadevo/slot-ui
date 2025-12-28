@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Accordion as BuiAccordion } from "@base-ui/react/accordion";
+import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
 
 import { ChevronDownIcon } from "lucide-react";
 
@@ -47,19 +47,19 @@ function useAccordionContext() {
 function Accordion({
   variant = "default",
   ...props
-}: BuiAccordion.Root.Props & VariantProps<typeof accordionItemVariants>) {
+}: AccordionPrimitive.Root.Props & VariantProps<typeof accordionItemVariants>) {
   return (
     <AccordionContext.Provider value={{ variant }}>
-      <BuiAccordion.Root data-slot="accordion" {...props} />
+      <AccordionPrimitive.Root data-slot="accordion" {...props} />
     </AccordionContext.Provider>
   );
 }
 
-function AccordionItem({ className, ...props }: BuiAccordion.Item.Props) {
+function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
   const { variant } = useAccordionContext();
 
   return (
-    <BuiAccordion.Item
+    <AccordionPrimitive.Item
       data-slot="accordion-item"
       data-variant={variant}
       className={cn(accordionItemVariants({ variant, className }))}
@@ -72,13 +72,13 @@ function AccordionTrigger({
   className,
   children,
   ...props
-}: BuiAccordion.Trigger.Props) {
+}: AccordionPrimitive.Trigger.Props) {
   return (
-    <BuiAccordion.Header
+    <AccordionPrimitive.Header
       data-slot="accordion-header"
       className="flex [&[data-open]_[data-slot=accordion-trigger-icon]]:rotate-180"
     >
-      <BuiAccordion.Trigger
+      <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
           "flex flex-1 items-start justify-between gap-4 py-4 text-start text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50",
@@ -91,8 +91,8 @@ function AccordionTrigger({
           data-slot="accordion-trigger-icon"
           className="text-surface-foreground/50 pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200"
         />
-      </BuiAccordion.Trigger>
-    </BuiAccordion.Header>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
   );
 }
 
@@ -100,15 +100,15 @@ function AccordionPanel({
   className,
   children,
   ...props
-}: BuiAccordion.Panel.Props) {
+}: AccordionPrimitive.Panel.Props) {
   return (
-    <BuiAccordion.Panel
+    <AccordionPrimitive.Panel
       data-slot="accordion-panel"
       className="h-(--accordion-panel-height) overflow-hidden text-sm transition-[height] duration-200 data-ending-style:h-0 data-starting-style:h-0"
       {...props}
     >
       <div className={cn("pt-0 pb-4", className)}>{children}</div>
-    </BuiAccordion.Panel>
+    </AccordionPrimitive.Panel>
   );
 }
 

@@ -1,13 +1,13 @@
 "use client";
 
-import { Radio as BuiRadio } from "@base-ui/react/radio";
-import { RadioGroup as BuiRadioGroup } from "@base-ui/react/radio-group";
+import { Radio as RadioPrimitive } from "@base-ui/react/radio";
+import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
 
 import { cn } from "@/lib/utils";
 
-function RadioGroup({ className, ...props }: BuiRadioGroup.Props) {
+function RadioGroup({ className, ...props }: RadioGroupPrimitive.Props) {
   return (
-    <BuiRadioGroup
+    <RadioGroupPrimitive
       className={cn("flex flex-col gap-3", className)}
       data-slot="radio-group"
       {...props}
@@ -15,9 +15,9 @@ function RadioGroup({ className, ...props }: BuiRadioGroup.Props) {
   );
 }
 
-function Radio({ className, ...props }: BuiRadio.Root.Props) {
+function Radio({ className, ...props }: RadioPrimitive.Root.Props) {
   return (
-    <BuiRadio.Root
+    <RadioPrimitive.Root
       className={cn(
         "border-input bg-background data-checked:bg-primary data-checked:border-primary focus-visible:border-primary relative inline-flex size-5 shrink-0 items-center justify-center rounded-full border shadow-xs outline-none disabled:opacity-50",
         className,
@@ -25,11 +25,11 @@ function Radio({ className, ...props }: BuiRadio.Root.Props) {
       data-slot="radio"
       {...props}
     >
-      <BuiRadio.Indicator
+      <RadioPrimitive.Indicator
         className="before:bg-primary-foreground flex before:size-2 before:rounded-full data-unchecked:hidden"
         data-slot="radio-indicator"
       />
-    </BuiRadio.Root>
+    </RadioPrimitive.Root>
   );
 }
 

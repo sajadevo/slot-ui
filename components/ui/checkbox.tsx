@@ -1,17 +1,17 @@
 "use client";
 
 import {
-  Checkbox as BuiCheckbox,
-  CheckboxGroup as BuiCheckboxGroup,
+  Checkbox as CheckboxPrimitive,
+  CheckboxGroup as CheckboxGroupPrimitive,
 } from "@base-ui/react";
 
 import { CheckIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-function Checkbox({ className, ...props }: BuiCheckbox.Root.Props) {
+function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
   return (
-    <BuiCheckbox.Root
+    <CheckboxPrimitive.Root
       data-slot="checkbox"
       className={cn(
         "peer border-input data-checked:bg-primary data-checked:text-primary-foreground data-checked:border-primary focus-visible:border-primary size-5 shrink-0 rounded-sm border shadow-xs outline-none [corner-shape:var(--shape)] disabled:cursor-not-allowed disabled:opacity-50",
@@ -19,19 +19,19 @@ function Checkbox({ className, ...props }: BuiCheckbox.Root.Props) {
       )}
       {...props}
     >
-      <BuiCheckbox.Indicator
+      <CheckboxPrimitive.Indicator
         data-slot="checkbox-indicator"
         className="grid size-full place-content-center text-current transition-none"
       >
         <CheckIcon className="size-3.5" />
-      </BuiCheckbox.Indicator>
-    </BuiCheckbox.Root>
+      </CheckboxPrimitive.Indicator>
+    </CheckboxPrimitive.Root>
   );
 }
 
-function CheckboxGroup({ className, ...props }: BuiCheckboxGroup.Props) {
+function CheckboxGroup({ className, ...props }: CheckboxGroupPrimitive.Props) {
   return (
-    <BuiCheckboxGroup
+    <CheckboxGroupPrimitive
       className={cn("flex flex-col items-start gap-2", className)}
       {...props}
     />

@@ -1,4 +1,4 @@
-import { Input as BuiInput } from "@base-ui/react/input";
+import { Input as InputPrimitive } from "@base-ui/react/input";
 
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -23,9 +23,9 @@ function Input({
   className,
   size = "default",
   ...props
-}: Omit<BuiInput.Props, "size"> & VariantProps<typeof inputVariants>) {
+}: Omit<InputPrimitive.Props, "size"> & VariantProps<typeof inputVariants>) {
   return (
-    <BuiInput
+    <InputPrimitive
       data-slot="input"
       data-size={size}
       className={cn(inputVariants({ size, className }))}

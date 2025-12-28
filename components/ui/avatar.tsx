@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar as BuiAvatar } from "@base-ui/react/avatar";
+import { Avatar as AvatarPrimitive } from "@base-ui/react/avatar";
 
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -25,9 +25,9 @@ function Avatar({
   size,
   className,
   ...props
-}: BuiAvatar.Root.Props & VariantProps<typeof avatarVariants>) {
+}: AvatarPrimitive.Root.Props & VariantProps<typeof avatarVariants>) {
   return (
-    <BuiAvatar.Root
+    <AvatarPrimitive.Root
       data-slot="avatar"
       className={cn(avatarVariants({ size, className }))}
       {...props}
@@ -35,9 +35,9 @@ function Avatar({
   );
 }
 
-function AvatarImage({ className, ...props }: BuiAvatar.Image.Props) {
+function AvatarImage({ className, ...props }: AvatarPrimitive.Image.Props) {
   return (
-    <BuiAvatar.Image
+    <AvatarPrimitive.Image
       data-slot="avatar-image"
       className={cn("aspect-square size-full", className)}
       {...props}
@@ -45,9 +45,12 @@ function AvatarImage({ className, ...props }: BuiAvatar.Image.Props) {
   );
 }
 
-function AvatarFallback({ className, ...props }: BuiAvatar.Fallback.Props) {
+function AvatarFallback({
+  className,
+  ...props
+}: AvatarPrimitive.Fallback.Props) {
   return (
-    <BuiAvatar.Fallback
+    <AvatarPrimitive.Fallback
       data-slot="avatar-fallback"
       className={cn(
         "bg-accent text-accent-foreground inline-flex size-full items-center justify-center rounded-full text-sm font-medium",
