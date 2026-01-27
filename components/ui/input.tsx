@@ -1,16 +1,18 @@
+"use client";
+
 import { Input as InputPrimitive } from "@base-ui/react/input";
 
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const inputVariants = cva(
-  "placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground border-input w-full min-w-0 rounded-md border bg-transparent text-base shadow-xs transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 text-sm [corner-shape:var(--shape)] focus-visible:ring-ring focus-visible:ring-3 focus-visible:border-primary",
+  "placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground border-input w-full min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 text-sm [corner-shape:var(--shape)] focus-visible:ring-ring focus-visible:ring-3 focus-visible:border-primary",
   {
     variants: {
       size: {
-        default: "h-10 px-3",
-        sm: "h-8 px-2 rounded-sm",
-        lg: "h-12 text-base px-4",
+        default: "h-9 px-3",
+        sm: "h-8 px-2.5 rounded-sm",
+        lg: "h-10 text-base px-3",
       },
     },
     defaultVariants: {

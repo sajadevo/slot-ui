@@ -1,3 +1,5 @@
+"use client";
+
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
 
 import { cn } from "@/lib/utils";
@@ -16,15 +18,15 @@ const buttonVariants = cva(
           "border bg-transparent text-foreground shadow-xs not-disabled:hover:bg-accent/50",
         ghost: "bg-transparent text-foreground not-disabled:hover:bg-accent",
         destructive:
-          "bg-destructive text-white not-disabled:hover:bg-destructive/90",
+          "bg-destructive/10 text-destructive not-disabled:hover:bg-destructive/15",
       },
       size: {
-        default: "h-10 px-4 has-[>svg]:px-3",
+        default: "h-9 px-3.5 has-[>svg]:px-3",
         sm: "h-8 gap-1.5 px-3 rounded-sm has-[>svg]:px-2.5 [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-12 text-base px-5 has-[>svg]:px-4 [&_svg:not([class*='size-'])]:size-5",
-        icon: "size-10",
-        "icon-sm": "size-8 rounded-sm",
-        "icon-lg": "size-12 [&_svg:not([class*='size-'])]:size-5",
+        lg: "h-10 text-base px-4 has-[>svg]:px-3.5 [&_svg:not([class*='size-'])]:size-4.5",
+        icon: "size-9",
+        "icon-sm": "size-8 rounded-sm [&_svg:not([class*='size-'])]:size-3.5",
+        "icon-lg": "size-10 [&_svg:not([class*='size-'])]:size-4.5",
       },
     },
     defaultVariants: {

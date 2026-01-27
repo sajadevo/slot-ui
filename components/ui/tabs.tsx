@@ -43,7 +43,7 @@ function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "text-muted-foreground data-active:text-foreground flex h-10 shrink-0 grow items-center justify-center gap-2 rounded-md px-4 text-sm font-medium whitespace-nowrap transition-all duration-200 outline-none [corner-shape:var(--shape)] data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "text-muted-foreground data-active:text-foreground flex h-9 shrink-0 grow items-center justify-center gap-2 rounded-md px-4 text-sm font-medium whitespace-nowrap transition-all duration-200 outline-none [corner-shape:var(--shape)] data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[orientation=vertical]:w-full data-[orientation=vertical]:justify-start [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}
@@ -61,4 +61,4 @@ function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
   );
 }
 
-export { Tabs, TabsList, TabsTab, TabsPanel };
+export { Tabs, TabsList, TabsPanel, TabsTab };
