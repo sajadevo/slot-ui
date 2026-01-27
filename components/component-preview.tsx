@@ -5,7 +5,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 import { cn } from "@/lib/utils";
-import { getRegistryComponent } from "@/registry";
+import { getRegistryComponent } from "@/registry/index.tsx";
 
 const MAX_HEIGHT = 180;
 
@@ -109,6 +109,7 @@ export function ComponentPreview({
             <Button
               size="sm"
               variant="outline"
+              className="bg-background not-disabled:hover:bg-muted"
               onClick={() => setIsExpanded(!isExpanded)}
             >
               {isExpanded ? "Hide Code" : "Show Code"}
