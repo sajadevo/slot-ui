@@ -56,6 +56,62 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/button/button-with-icon.tsx",
   },
+  "button-sm": {
+    name: "button-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-sm"),
+    ),
+    file: "registry/examples/button/button-sm.tsx",
+  },
+  "button-lg": {
+    name: "button-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-lg"),
+    ),
+    file: "registry/examples/button/button-lg.tsx",
+  },
+  "button-disabled": {
+    name: "button-disabled",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-disabled"),
+    ),
+    file: "registry/examples/button/button-disabled.tsx",
+  },
+  "button-icon": {
+    name: "button-icon",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-icon"),
+    ),
+    file: "registry/examples/button/button-icon.tsx",
+  },
+  "button-icon-sm": {
+    name: "button-icon-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-icon-sm"),
+    ),
+    file: "registry/examples/button/button-icon-sm.tsx",
+  },
+  "button-icon-lg": {
+    name: "button-icon-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-icon-lg"),
+    ),
+    file: "registry/examples/button/button-icon-lg.tsx",
+  },
+  "button-with-link": {
+    name: "button-with-link",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-with-link"),
+    ),
+    file: "registry/examples/button/button-with-link.tsx",
+  },
+  "button-loading": {
+    name: "button-loading",
+    component: React.lazy(
+      () => import("@/registry/examples/button/button-loading"),
+    ),
+    file: "registry/examples/button/button-loading.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {
