@@ -1,0 +1,11 @@
+import { Button } from "@/components/ui/button";
+import { MailIcon } from "lucide-react";
+
+export default function ButtonWithIcon() {
+  return (
+    <Button>
+      <MailIcon />
+      Login with Email
+    </Button>
+  );
+}
