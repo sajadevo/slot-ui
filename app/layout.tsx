@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "@/styles/globals.css";
@@ -24,9 +25,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="root">{children}</div>
+        <ThemeProvider
+          enableSystem
+          enableColorScheme
+          disableTransitionOnChange
+          attribute="class"
+          defaultTheme="system"
+        >
+          <div className="root">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );
