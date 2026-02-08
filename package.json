@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "shadcn build && next build",
+    "build": "shadcn build ./shadcn-registry.json && next build",
     "start": "next start",
     "lint": "eslint",
     "postinstall": "fumadocs-mdx",
-    "registry:build": "shadcn build"
+    "registry:build": "shadcn build ./shadcn-registry.json"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
