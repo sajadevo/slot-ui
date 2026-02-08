@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Slot UI
 
-## Getting Started
+Beautiful components. Full control. Zero lock-in. Grab, customize, ship.
 
-First, run the development server:
+Slot UI is a collection of beautifully designed, accessible, and customizable components built on top of [Base UI](https://base-ui.com) and [Tailwind CSS](https://tailwindcss.com). Inspired by [shadcn/ui](https://ui.shadcn.com), it follows the same open-code philosophy.
+
+## Features
+
+- Built on [Base UI](https://base-ui.com) primitives for production-grade accessibility
+- Styled with [Tailwind CSS](https://tailwindcss.com)
+- Open code — components live in your project, not in `node_modules`
+- Dark mode support out of the box
+- Three corner shape modes: round, square, and squircle
+- Compatible with the [shadcn CLI](https://ui.shadcn.com/docs/cli) for easy installation
+- AI-ready — consistent, readable structure for AI tools
+
+## Installation
+
+### With the shadcn CLI
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx shadcn@latest add @slot/button
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To install all components:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx shadcn@latest add @slot/ui
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Manually
 
-## Learn More
+1. Install [Base UI](https://base-ui.com/react/overview/quick-start) in your project
+2. Find the component you need on the [components page](https://slot-ui.com/docs/components)
+3. Copy the source code into your project
+4. Install all the required dependencies
+5. Import and use the component
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visit [slot-ui.com/docs](https://slot-ui.com/docs) to view the full documentation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
