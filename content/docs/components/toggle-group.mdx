@@ -1,0 +1,81 @@
+---
+title: Toggle Group
+description: A row of toggle buttons grouped together for selecting one or multiple options from a set.
+---
+
+<ComponentPreview name="toggle-group-demo">
+  <ComponentSource name="toggle-group-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/toggle-group
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="toggle-group"
+    title="components/ui/toggle-group.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Toggle, ToggleGroup } from "@/components/ui/toggle-group";
+```
+
+```tsx
+<ToggleGroup>
+  <Toggle value="bold" aria-label="Toggle bold">
+    <BoldIcon />
+  </Toggle>
+  <Toggle value="italic" aria-label="Toggle italic">
+    <ItalicIcon />
+  </Toggle>
+  <Toggle value="underline" aria-label="Toggle underline">
+    <UnderlineIcon />
+  </Toggle>
+</ToggleGroup>
+```
+
+## Examples
+
+### Outline
+
+<ComponentPreview name="toggle-group-outline">
+  <ComponentSource name="toggle-group-outline" />
+</ComponentPreview>
+
+### Small
+
+<ComponentPreview name="toggle-group-sm">
+  <ComponentSource name="toggle-group-sm" />
+</ComponentPreview>
+
+### Large
+
+<ComponentPreview name="toggle-group-lg">
+  <ComponentSource name="toggle-group-lg" />
+</ComponentPreview>
+
+### Vertical
+
+<ComponentPreview name="toggle-group-vertical">
+  <ComponentSource name="toggle-group-vertical" />
+</ComponentPreview>
+
+### Disabled
+
+<ComponentPreview name="toggle-group-disabled">
+  <ComponentSource name="toggle-group-disabled" />
+</ComponentPreview>
