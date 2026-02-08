@@ -1,0 +1,47 @@
+---
+title: Slider
+description: A draggable control for selecting a numeric value within a defined minimum and maximum range.
+---
+
+<ComponentPreview name="slider-demo">
+  <ComponentSource name="slider-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/slider
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="slider"
+    title="components/ui/slider.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Slider } from "@/components/ui/slider";
+```
+
+```tsx
+<Slider defaultValue={50} max={100} />
+```
+
+## Examples
+
+### Range
+
+<ComponentPreview name="slider-range">
+  <ComponentSource name="slider-range" />
+</ComponentPreview>
