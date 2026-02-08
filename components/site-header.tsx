@@ -18,7 +18,7 @@ export function SiteHeader() {
           nativeButton={false}
           render={<Link href="/" />}
         >
-          <span className="bg-primary size-5 rounded-sm [corner-shape:var(--shape)]" />
+          <span className="bg-primary size-5 rounded-sm corner-shape" />
           <span className="sr-only">{siteConfig.name}</span>
         </Button>
         <Separator

@@ -79,6 +79,12 @@
   --color-warning-foreground: var(--color-amber-500);
 }
 
+@utility corner-shape {
+  @supports (corner-shape: round) {
+    corner-shape: var(--shape);
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

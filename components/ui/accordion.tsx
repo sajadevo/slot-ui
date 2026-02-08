@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const accordionItemVariants = cva(
-  "bg-transparent [corner-shape:var(--shape)]",
+  "bg-transparent corner-shape",
   {
     variants: {
       variant: {

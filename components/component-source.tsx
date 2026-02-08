@@ -54,7 +54,7 @@ export async function ComponentSource({
       className={cn(
         "overflow-hidden",
         {
-          "relative my-4 rounded-[if(style(--shape:squircle):1.75rem;else:var(--radius-xl))] border [corner-shape:var(--shape)]":
+          "relative my-4 rounded-[if(style(--shape:squircle):1.75rem;else:var(--radius-xl))] border corner-shape":
             withHeader,
         },
         className,
