@@ -1,0 +1,59 @@
+---
+title: Dialog
+description: A layered overlay window for focused interactions like editing, confirming, or displaying supplementary content.
+---
+
+<ComponentPreview name="dialog-demo">
+  <ComponentSource name="dialog-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/dialog
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="dialog"
+    title="components/ui/dialog.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Dialog,
+  DialogTrigger,
+  DialogPopup,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+  DialogClose,
+} from "@/components/ui/dialog";
+```
+
+```tsx
+<Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogPopup>
+    <DialogHeader>
+      <DialogTitle>Dialog Title</DialogTitle>
+      <DialogDescription>Dialog description.</DialogDescription>
+    </DialogHeader>
+    <DialogFooter>
+      <DialogClose>Close</DialogClose>
+    </DialogFooter>
+  </DialogPopup>
+</Dialog>
+```
