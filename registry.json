@@ -1,0 +1,387 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "slot",
+  "homepage": "https://slot-ui.com",
+  "items": [
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "description": "Slot UI design tokens, dark mode, corner shape utility, and base styles.",
+      "cssVars": {
+        "theme": {
+          "--color-background": "var(--color-white)",
+          "--color-foreground": "var(--color-neutral-800)",
+          "--color-card": "var(--color-white)",
+          "--color-card-foreground": "var(--color-neutral-800)",
+          "--color-popover": "var(--color-white)",
+          "--color-popover-foreground": "var(--color-neutral-800)",
+          "--color-primary": "var(--color-blue-500)",
+          "--color-primary-foreground": "var(--color-white)",
+          "--color-secondary": "var(--color-neutral-100)",
+          "--color-secondary-foreground": "var(--color-neutral-800)",
+          "--color-muted": "var(--color-neutral-100)",
+          "--color-muted-foreground": "var(--color-neutral-600)",
+          "--color-accent": "var(--color-neutral-100)",
+          "--color-accent-foreground": "var(--color-neutral-800)",
+          "--color-border": "var(--color-neutral-200)",
+          "--color-input": "var(--color-neutral-200)",
+          "--color-ring": "var(--color-blue-200)",
+          "--color-destructive": "var(--color-red-500)",
+          "--color-destructive-foreground": "var(--color-red-800)",
+          "--color-success": "var(--color-green-600)",
+          "--color-success-foreground": "var(--color-green-800)",
+          "--color-warning": "var(--color-amber-500)",
+          "--color-warning-foreground": "var(--color-amber-800)",
+          "--font-sans": "var(--font-geist-sans)",
+          "--font-mono": "var(--font-geist-mono)",
+          "--shape": "squircle",
+          "--radius": "3rem",
+          "--radius-xs": "calc(var(--radius) - 6px)",
+          "--radius-sm": "calc(var(--radius) - 4px)",
+          "--radius-md": "calc(var(--radius) - 2px)",
+          "--radius-lg": "var(--radius)",
+          "--radius-xl": "calc(var(--radius) + 6px)",
+          "--radius-2xl": "calc(var(--radius) + 10px)",
+          "--radius-3xl": "calc(var(--radius) + 16px)",
+          "--radius-4xl": "calc(var(--radius) + 22px)"
+        },
+        "dark": {
+          "--color-background": "var(--color-neutral-950)",
+          "--color-foreground": "var(--color-neutral-200)",
+          "--color-card": "var(--color-neutral-950)",
+          "--color-card-foreground": "var(--color-neutral-200)",
+          "--color-popover": "var(--color-neutral-950)",
+          "--color-popover-foreground": "var(--color-neutral-200)",
+          "--color-primary": "var(--color-blue-600)",
+          "--color-primary-foreground": "var(--color-white)",
+          "--color-secondary": "var(--color-neutral-800)",
+          "--color-secondary-foreground": "var(--color-neutral-200)",
+          "--color-muted": "var(--color-neutral-800)",
+          "--color-muted-foreground": "var(--color-neutral-400)",
+          "--color-accent": "var(--color-neutral-800)",
+          "--color-accent-foreground": "var(--color-neutral-200)",
+          "--color-border": "var(--color-neutral-800)",
+          "--color-input": "var(--color-neutral-800)",
+          "--color-ring": "var(--color-blue-900)",
+          "--color-destructive": "var(--color-red-500)",
+          "--color-destructive-foreground": "var(--color-red-500)",
+          "--color-success": "var(--color-green-500)",
+          "--color-success-foreground": "var(--color-green-500)",
+          "--color-warning": "var(--color-amber-500)",
+          "--color-warning-foreground": "var(--color-amber-500)"
+        }
+      },
+      "css": {
+        "@custom-variant dark": "(&:is(.dark *))",
+        "@utility corner-shape": {
+          "@supports (corner-shape: round)": {
+            "corner-shape": "var(--shape)"
+          }
+        },
+        "@layer base": {
+          "*": {
+            "border-color": "var(--color-border)",
+            "outline-color": "var(--color-primary)",
+            "@apply": "focus-visible:ring-ring outline-none focus-visible:ring-3"
+          },
+          "body": {
+            "@apply": "bg-background text-foreground relative antialiased"
+          },
+          ".root": {
+            "@apply": "isolate"
+          }
+        }
+      }
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "description": "Utility functions for Slot UI components.",
+      "dependencies": ["tailwind-merge", "clsx"],
+      "files": [
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Expandable content panels that stack vertically, letting users reveal and hide sections on demand.",
+      "dependencies": ["@base-ui/react", "class-variance-authority", "lucide-react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "A modal dialog that interrupts the user with important content and expects a response.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "An image element with a fallback for representing the user.",
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "A clickable element for triggering actions and submitting forms, available in multiple variants and sizes.",
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A control that allows the user to toggle between checked and unchecked states.",
+      "dependencies": ["@base-ui/react", "lucide-react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "An interactive component which expands and collapses content.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A modal window that renders on top of the main content.",
+      "dependencies": ["@base-ui/react", "lucide-react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "A text input field for capturing user input.",
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "A text label for form fields and controls.",
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "A floating panel anchored to a trigger element.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "A visual indicator showing the completion progress of a task.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Radio",
+      "description": "A set of selectable options where only one can be selected at a time.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/radio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A visual divider between content sections.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "A placeholder loading state for content.",
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "A control for selecting a numeric value within a range.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "A toggle control for switching between on and off states.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "A set of layered content panels displayed one at a time.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A two-state button that can be toggled on or off.",
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "A group of toggle buttons where one or multiple can be active.",
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "registryDependencies": ["theme", "utils", "toggle"],
+      "files": [
+        {
+          "path": "components/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "A floating label that appears on hover to provide additional context.",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["theme", "utils"],
+      "files": [
+        {
+          "path": "components/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "shadcn build && next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
@@ -36,6 +37,7 @@
     "eslint-config-next": "16.1.0",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
+    "shadcn": "^3.8.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
