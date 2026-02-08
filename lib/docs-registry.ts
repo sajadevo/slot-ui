@@ -7,10 +7,6 @@ const overviewRegistry = [
     label: "Get Started",
     href: "/docs/get-started",
   },
-  {
-    label: "Components",
-    href: "/docs/components",
-  },
 ];
 
 const componentsRegistry = [
