@@ -1,0 +1,52 @@
+---
+title: Checkbox Group
+description: A container for organizing multiple checkboxes with consistent spacing and layout.
+---
+
+<ComponentPreview name="checkbox-group-demo">
+  <ComponentSource name="checkbox-group-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/checkbox
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="checkbox"
+    title="components/ui/checkbox.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Checkbox, CheckboxGroup } from "@/components/ui/checkbox";
+```
+
+```tsx
+<CheckboxGroup>
+  <div className="flex items-center gap-2">
+    <Checkbox id="terms" />
+    <Label htmlFor="terms">Accept terms and conditions</Label>
+  </div>
+  <div className="flex items-center gap-2">
+    <Checkbox id="marketing" />
+    <Label htmlFor="marketing">Receive marketing emails</Label>
+  </div>
+  <div className="flex items-center gap-2">
+    <Checkbox id="updates" />
+    <Label htmlFor="updates">Get product updates</Label>
+  </div>
+</CheckboxGroup>
+```
