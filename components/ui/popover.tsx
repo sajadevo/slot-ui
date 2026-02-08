@@ -65,13 +65,13 @@ function PopoverPopup({
         <PopoverPrimitive.Popup
           data-slot="popover-Popup"
           className={cn(
-            "bg-popover text-foreground origin-(--transform-origin) rounded-lg border p-4 text-balance shadow-xs transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
+            "bg-popover text-foreground origin-(--transform-origin) rounded-[if(style(--shape:squircle):2rem;else:var(--radius-xl))] border p-4 text-balance shadow-xs transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
             className,
           )}
           {...props}
         >
           {withArrow && (
-            <PopoverArrow className="data-[side=bottom]:top-[-8px] data-[side=left]:right-[-13px] data-[side=left]:rotate-90 data-[side=right]:left-[-13px] data-[side=right]:-rotate-90 data-[side=top]:bottom-[-8px] data-[side=top]:rotate-180">
+            <PopoverArrow className="data-[side=bottom]:-top-2 data-[side=left]:right-[-13px] data-[side=left]:rotate-90 data-[side=right]:left-[-13px] data-[side=right]:-rotate-90 data-[side=top]:-bottom-2 data-[side=top]:rotate-180">
               <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
                 <path
                   d="M9.66437 2.60207L4.80758 6.97318C4.07308 7.63423 3.11989 8 2.13172 8H0V10H20V8H18.5349C17.5468 8 16.5936 7.63423 15.8591 6.97318L11.0023 2.60207C10.622 2.2598 10.0447 2.25979 9.66437 2.60207Z"
@@ -97,7 +97,7 @@ function PopoverClose(props: PopoverPrimitive.Close.Props) {
 function PopoverTitle({ className, ...props }: PopoverPrimitive.Title.Props) {
   return (
     <PopoverPrimitive.Title
-      className={cn("text-lg leading-none font-semibold", className)}
+      className={cn("text-lg mb-2 leading-none font-semibold", className)}
       data-slot="popover-title"
       {...props}
     />
