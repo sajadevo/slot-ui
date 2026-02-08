@@ -1,0 +1,39 @@
+---
+title: Label
+description: An accessible text label that pairs with form controls for clear identification and screen reader support.
+---
+
+<ComponentPreview name="label-demo">
+  <ComponentSource name="label-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/label
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="label"
+    title="components/ui/label.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/label";
+```
+
+```tsx
+<Label htmlFor="username">Username</Label>
+```
