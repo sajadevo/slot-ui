@@ -1,0 +1,39 @@
+---
+title: Skeleton
+description: An animated placeholder that mimics the layout of content while it loads, reducing perceived wait time.
+---
+
+<ComponentPreview name="skeleton-demo">
+  <ComponentSource name="skeleton-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/skeleton
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="skeleton"
+    title="components/ui/skeleton.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Skeleton } from "@/components/ui/skeleton";
+```
+
+```tsx
+<Skeleton className="size-12" />
+```
