@@ -1,0 +1,53 @@
+---
+title: Radio Group
+description: A group of mutually exclusive options where only one selection can be active at a time.
+---
+
+<ComponentPreview name="radio-demo">
+  <ComponentSource name="radio-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/radio
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="radio"
+    title="components/ui/radio.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { RadioGroup, Radio } from "@/components/ui/radio";
+import { Label } from "@/components/ui/label";
+```
+
+```tsx
+<RadioGroup defaultValue="comfortable">
+  <div className="flex items-center gap-2">
+    <Radio value="default" id="default" />
+    <Label htmlFor="default">Default</Label>
+  </div>
+  <div className="flex items-center gap-2">
+    <Radio value="comfortable" id="comfortable" />
+    <Label htmlFor="comfortable">Comfortable</Label>
+  </div>
+  <div className="flex items-center gap-2">
+    <Radio value="compact" id="compact" />
+    <Label htmlFor="compact">Compact</Label>
+  </div>
+</RadioGroup>
+```
