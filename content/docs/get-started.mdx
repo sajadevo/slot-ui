@@ -1,0 +1,101 @@
+---
+title: Get Started
+description: A quick guide to setting up Slot UI and adding your first component.
+---
+
+## Prerequisites
+
+Slot UI components require a React project with [Tailwind CSS v4](https://tailwindcss.com) installed.
+
+## Add the Stylesheet
+
+Slot UI uses a design token system powered by CSS variables and Tailwind CSS. Add the stylesheet to your project's global CSS file:
+
+```css title="styles/globals.css"
+@import "tailwindcss";
+@import "./slot-ui.css";
+```
+
+The `slot-ui.css` file defines all the design tokens — colors, radii, fonts, and more. You can customize any of these to match your brand.
+
+## Install Dependencies
+
+Slot UI components are built on top of a few core dependencies:
+
+```bash
+npm install @base-ui/react class-variance-authority clsx tailwind-merge lucide-react
+```
+
+Then add the `cn` utility to your project:
+
+```ts title="lib/utils.ts"
+import { twMerge } from "tailwind-merge";
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+## Adding Components
+
+You can add components automatically with the CLI or manually by copying the source code.
+
+### With the CLI
+
+Each component page includes a CLI command that handles installation and dependencies for you:
+
+```bash
+npx shadcn@latest add @slot/button
+```
+
+To install all components at once:
+
+```bash
+npx shadcn@latest add @slot/ui
+```
+
+### Manually
+
+1. Find the component you need on the components page
+2. Switch to the **Manual** tab in the installation section
+3. Copy the source code into your project (e.g. `components/ui/button.tsx`)
+4. Install any listed dependencies
+5. Import and use the component
+
+## Customization
+
+### Design Tokens
+
+All design tokens are defined as CSS variables in `slot-ui.css` and can be customized in your global stylesheet. Here are the key tokens:
+
+```css
+@theme {
+  /* Colors */
+  --color-primary: var(--color-blue-500);
+  --color-secondary: var(--color-neutral-100);
+  --color-destructive: var(--color-red-500);
+  --color-success: var(--color-green-600);
+  --color-warning: var(--color-amber-500);
+
+  /* Shape */
+  --shape: squircle; /* round | square | squircle */
+  --radius: 3rem;
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+```
+
+### Dark Mode
+
+Slot UI includes dark mode support out of the box. Dark mode tokens are defined under the `.dark` class in `slot-ui.css`. If you're using `next-themes`, it works automatically.
+
+### Corner Shape
+
+Slot UI supports three corner shape modes via the `--shape` CSS variable:
+
+- `round` — standard rounded corners
+- `square` — sharp corners
+- `squircle` — smooth superellipse corners (default)
