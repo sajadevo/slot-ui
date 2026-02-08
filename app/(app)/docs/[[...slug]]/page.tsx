@@ -34,7 +34,7 @@ export default async function Page(props: {
                 <h1 className="scroll-m-20 text-2xl font-semibold tracking-tight sm:text-3xl xl:text-3xl">
                   {doc.title}
                 </h1>
-                <div className="docs-nav bg-background/80 border-border/50 fixed inset-x-0 bottom-0 isolate z-50 flex items-center gap-2 border-t px-6 py-4 backdrop-blur-sm sm:static sm:z-0 sm:border-t-0 sm:bg-transparent sm:px-0 sm:pt-1.5 sm:backdrop-blur-none">
+                <div className="flex items-center gap-2">
                   {neighbours.previous && (
                     <Button
                       size="icon-sm"
@@ -68,10 +68,10 @@ export default async function Page(props: {
               )}
             </div>
           </div>
-          <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0">
+          <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0 sm:pb-0 pb-24">
             <MDX components={mdxComponents} />
           </div>
-          <div className="flex items-center justify-between py-10">
+          <div className="hidden sm:flex items-center justify-between py-10">
             {neighbours.previous && (
               <Button
                 variant="secondary"
@@ -96,7 +96,7 @@ export default async function Page(props: {
           </div>
         </div>
       </div>
-      <div className="no-scrollbar sticky top-(--header-height) z-30 ml-auto hidden h-[calc(100svh-var(--header-height))] w-64 flex-col overflow-y-auto py-8 lg:flex">
+      <div className="no-scrollbar sticky top-(--header-height) z-30 ml-auto hidden h-[calc(100svh-var(--header-height))] w-64 flex-col overflow-y-auto py-8 xl:flex">
         {doc.toc?.length ? <DocsTableOfContents toc={doc.toc} /> : null}
       </div>
     </div>

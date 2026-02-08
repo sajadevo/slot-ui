@@ -10,7 +10,7 @@ export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="sticky top-(--header-height) z-30 flex h-[calc(100svh-var(--header-height))] basis-(--sidebar-width) flex-col overscroll-none bg-transparent">
+    <div className="sticky top-(--header-height) z-30 hidden lg:flex h-[calc(100svh-var(--header-height))] basis-(--sidebar-width) flex-col overscroll-none bg-transparent">
       <div className="no-scrollbar flex min-h-0 flex-1 flex-col gap-2.5 overflow-x-hidden overflow-y-auto">
         <div className="from-background via-background/80 to-background/50 sticky -top-1 z-10 h-8 shrink-0 bg-linear-to-b blur-xs" />
         {docsRegistry.map(({ title, registry }) => {

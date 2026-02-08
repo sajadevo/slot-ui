@@ -1,10 +1,10 @@
-import Link from "next/link";
-
+import { GitHubLink } from "@/components/github-link";
+import { MainNav } from "@/components/main-nav";
+import { MobileNav } from "@/components/mobile-nav";
+import { ModeSwitcher } from "@/components/mode-switcher";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { MainNav } from "@/components/main-nav";
-import { GitHubLink } from "@/components/github-link";
-import { ModeSwitcher } from "@/components/mode-switcher";
+import Link from "next/link";
 
 import { siteConfig } from "@/lib/config";
 
@@ -18,7 +18,7 @@ export function SiteHeader() {
           nativeButton={false}
           render={<Link href="/" />}
         >
-          <span className="bg-primary size-5 rounded-sm corner-shape" />
+          <span className="bg-primary corner-shape size-4 rounded-sm md:size-5" />
           <span className="sr-only">{siteConfig.name}</span>
         </Button>
         <Separator
@@ -26,6 +26,7 @@ export function SiteHeader() {
           className="mr-1 ml-2 h-4 data-[orientation=vertical]:self-center"
         />
         <MainNav />
+        <MobileNav />
         <div className="ml-auto flex items-center justify-end gap-2">
           <GitHubLink />
           <Separator

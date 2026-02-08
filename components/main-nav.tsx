@@ -13,7 +13,7 @@ export function MainNav({ className, ...props }: React.ComponentProps<"nav">) {
   const navItems = siteConfig.navItems;
 
   return (
-    <nav className={cn("flex items-center gap-px", className)} {...props}>
+    <nav className={cn("hidden lg:flex items-center gap-px", className)} {...props}>
       {navItems.map(({ href, label }) => (
         <Button
           key={href}
