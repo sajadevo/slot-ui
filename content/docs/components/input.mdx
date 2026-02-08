@@ -1,0 +1,53 @@
+---
+title: Input
+description: A styled text field for capturing user input, supporting multiple sizes and form integration.
+---
+
+<ComponentPreview name="input-demo" className="*:data-slot:max-w-sm *:data-slot:mx-auto">
+  <ComponentSource name="input-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/input
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="input"
+    title="components/ui/input.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input";
+```
+
+```tsx
+<Input placeholder="Type Text" />
+```
+
+## Examples
+
+### Small
+
+<ComponentPreview name="input-sm" className="*:data-slot:max-w-sm *:data-slot:mx-auto">
+  <ComponentSource name="input-sm" />
+</ComponentPreview>
+
+### Large
+
+<ComponentPreview name="input-lg" className="*:data-slot:max-w-sm *:data-slot:mx-auto">
+  <ComponentSource name="input-lg" />
+</ComponentPreview>
