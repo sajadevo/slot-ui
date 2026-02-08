@@ -35,29 +35,28 @@ export default async function Page(props: {
                   {doc.title}
                 </h1>
                 <div className="docs-nav bg-background/80 border-border/50 fixed inset-x-0 bottom-0 isolate z-50 flex items-center gap-2 border-t px-6 py-4 backdrop-blur-sm sm:static sm:z-0 sm:border-t-0 sm:bg-transparent sm:px-0 sm:pt-1.5 sm:backdrop-blur-none">
-                  {/* <DocsCopyPage page={raw} url={absoluteUrl(page.url)} /> */}
                   {neighbours.previous && (
                     <Button
+                      size="icon-sm"
                       variant="secondary"
-                      size="icon"
-                      className="extend-touch-target ml-auto size-8 shadow-none md:size-7"
+                      className="ml-auto"
+                      nativeButton={false}
+                      render={<Link href={neighbours.previous.url} />}
                     >
-                      <Link href={neighbours.previous.url}>
-                        <ArrowLeftIcon />
-                        <span className="sr-only">Previous</span>
-                      </Link>
+                      <ArrowLeftIcon />
+                      <span className="sr-only">Previous</span>
                     </Button>
                   )}
                   {neighbours.next && (
                     <Button
+                      size="icon-sm"
                       variant="secondary"
-                      size="icon"
-                      className="extend-touch-target size-8 shadow-none md:size-7"
+                      className="ml-auto"
+                      nativeButton={false}
+                      render={<Link href={neighbours.next.url} />}
                     >
-                      <Link href={neighbours.next.url}>
-                        <span className="sr-only">Next</span>
-                        <ArrowRightIcon />
-                      </Link>
+                      <span className="sr-only">Next</span>
+                      <ArrowRightIcon />
                     </Button>
                   )}
                 </div>
@@ -71,6 +70,28 @@ export default async function Page(props: {
           </div>
           <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0">
             <MDX components={mdxComponents} />
+          </div>
+          <div className="flex items-center justify-between py-10">
+            {neighbours.previous && (
+              <Button
+                variant="secondary"
+                nativeButton={false}
+                render={<Link href={neighbours.previous.url} />}
+              >
+                <ArrowLeftIcon />
+                {neighbours.previous.name}
+              </Button>
+            )}
+            {neighbours.next && (
+              <Button
+                variant="secondary"
+                nativeButton={false}
+                render={<Link href={neighbours.next.url} />}
+              >
+                {neighbours.next.name}
+                <ArrowRightIcon />
+              </Button>
+            )}
           </div>
         </div>
       </div>
