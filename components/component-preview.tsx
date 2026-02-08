@@ -66,6 +66,7 @@ export function ComponentPreview({
     >
       {/* Preview area */}
       <div
+        data-slot="preview"
         className={cn(
           "preview relative flex min-h-88 w-full justify-center p-10",
           {
