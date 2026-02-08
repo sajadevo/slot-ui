@@ -1,0 +1,39 @@
+---
+title: Progress
+description: A horizontal bar that visually communicates the completion status of an ongoing operation.
+---
+
+<ComponentPreview name="progress-demo">
+  <ComponentSource name="progress-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/progress
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="progress"
+    title="components/ui/progress.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Progress } from "@/components/ui/progress";
+```
+
+```tsx
+<Progress value={50} />
+```
