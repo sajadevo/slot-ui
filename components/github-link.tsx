@@ -30,7 +30,7 @@ export function GitHubLink() {
 
 export async function StarsCount() {
   const response = await fetch(
-    "https://api.github.com/repos/sajadevo/sajadevo.com",
+    "https://api.github.com/repos/sajadevo/slot-ui",
     {
       next: { revalidate: 86400 },
     },
