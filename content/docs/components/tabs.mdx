@@ -1,0 +1,54 @@
+---
+title: Tabs
+description: A tabbed interface for organizing content into distinct panels that display one at a time.
+---
+
+<ComponentPreview name="tabs-demo">
+  <ComponentSource name="tabs-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/tabs
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="tabs"
+    title="components/ui/tabs.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Tabs, TabsList, TabsTab, TabsPanel } from "@/components/ui/tabs";
+```
+
+```tsx
+<Tabs defaultValue="account">
+  <TabsList>
+    <TabsTab value="account">Account</TabsTab>
+    <TabsTab value="password">Password</TabsTab>
+  </TabsList>
+  <TabsPanel value="account">Account Content</TabsPanel>
+  <TabsPanel value="password">Password Content</TabsPanel>
+</Tabs>
+```
+
+## Examples
+
+### Vertical
+
+<ComponentPreview name="tabs-vertical">
+  <ComponentSource name="tabs-vertical" />
+</ComponentPreview>
