@@ -48,6 +48,22 @@ Slot UI supports three corner shape modes via the `--shape` CSS variable:
 }
 ```
 
-- **round**: Standard rounded corners using traditional `border-radius`. The most common and widely supported shape across all browsers.
-- **square**: Sharp, straight corners with no rounding. Best suited for minimal, geometric, or brutalist design styles.
-- **squircle**: Smooth superellipse corners that produce a continuous curvature, similar to iOS app icons. This is the default shape in Slot UI and uses the CSS `corner-shape` property for a more natural, organic feel compared to standard rounding.
+- **round** — Standard rounded corners using traditional `border-radius`. The most common and widely supported shape across all browsers.
+- **square** — Sharp, straight corners with no rounding. Best suited for minimal, geometric, or brutalist design styles.
+- **squircle** — Smooth superellipse corners that produce a continuous curvature, similar to iOS app icons. This is the default shape in Slot UI and uses the CSS `corner-shape` property for a more natural, organic feel compared to standard rounding.
+
+Slot UI provides a `corner-shape` Tailwind utility class that applies the selected shape with a `@supports` check for browser compatibility:
+
+```css
+@utility corner-shape {
+  @supports (corner-shape: round) {
+    corner-shape: var(--shape);
+  }
+}
+```
+
+Use it on any element:
+
+```html
+<div className="rounded-md corner-shape">...</div>
+```
