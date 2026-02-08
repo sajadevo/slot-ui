@@ -1,0 +1,52 @@
+---
+title: Introduction
+description: Beautiful components. Full control. Zero lock-in. Grab, customize, ship.
+---
+
+Slot UI is a collection of beautifully designed, accessible, and customizable components built on top of [Base UI](https://base-ui.com) and [Tailwind CSS](https://tailwindcss.com). Inspired by [shadcn/ui](https://ui.shadcn.com), it follows the same open-code philosophy — you get the source code, you own it, you customize it, you ship it.
+
+It is not a component library you install as a dependency. It's how you build your component library.
+
+## Why Slot UI
+
+Most component libraries give you pre-packaged components behind a `node_modules` wall. When you need to change something, you're fighting the library — overriding styles, wrapping components, or forking the package.
+
+Slot UI takes a different approach. Every component is a file in your project. You can read it, modify it, and extend it however you want.
+
+## Built on Base UI
+
+[Base UI](https://base-ui.com) provides unstyled, accessible primitives that handle the hard parts — keyboard navigation, focus management, ARIA attributes, and screen reader support. Slot UI layers thoughtful design and sensible defaults on top.
+
+This means you get production-grade accessibility out of the box, without being locked into someone else's design decisions.
+
+## How It Works
+
+Components are added to your project using the CLI or by copying the source code directly.
+
+```bash
+npx shadcn@latest add @slot/button
+```
+
+This places the component source code in your project. From there, it's yours — update the styles, change the variants, add new props, or rewrite it entirely.
+
+## Principles
+
+### Open Code
+
+The component code lives in your project. No wrappers, no abstractions, no hidden magic. You can read every line, understand every decision, and change anything.
+
+### Composable
+
+Components follow a consistent, composable API. They're built to work together and are predictable to use. If you know one component, you know them all.
+
+### Beautiful Defaults
+
+Every component ships with carefully crafted styles that work cohesively. They look great out of the box, but they're designed to be customized.
+
+### Accessible
+
+Built on Base UI primitives, every component follows WAI-ARIA patterns and supports keyboard navigation, screen readers, and focus management by default.
+
+### AI-Ready
+
+Because the code lives in your project and follows a consistent, readable structure, AI tools can easily understand, modify, and generate new components based on existing patterns.
