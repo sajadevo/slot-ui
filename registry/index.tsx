@@ -112,6 +112,471 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/button/button-loading.tsx",
   },
+  // Accordion
+  accordion: {
+    name: "accordion",
+    component: React.lazy(() =>
+      import("@/components/ui/accordion").then((mod) => ({
+        default: mod.Accordion,
+      })),
+    ),
+    file: "components/ui/accordion.tsx",
+  },
+  "accordion-demo": {
+    name: "accordion-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/accordion/accordion-demo"),
+    ),
+    file: "registry/examples/accordion/accordion-demo.tsx",
+  },
+  "accordion-solid": {
+    name: "accordion-solid",
+    component: React.lazy(
+      () => import("@/registry/examples/accordion/accordion-solid"),
+    ),
+    file: "registry/examples/accordion/accordion-solid.tsx",
+  },
+  "accordion-outline": {
+    name: "accordion-outline",
+    component: React.lazy(
+      () => import("@/registry/examples/accordion/accordion-outline"),
+    ),
+    file: "registry/examples/accordion/accordion-outline.tsx",
+  },
+  // Alert Dialog
+  "alert-dialog": {
+    name: "alert-dialog",
+    component: React.lazy(() =>
+      import("@/components/ui/alert-dialog").then((mod) => ({
+        default: mod.AlertDialog,
+      })),
+    ),
+    file: "components/ui/alert-dialog.tsx",
+  },
+  "alert-dialog-demo": {
+    name: "alert-dialog-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/alert-dialog/alert-dialog-demo"),
+    ),
+    file: "registry/examples/alert-dialog/alert-dialog-demo.tsx",
+  },
+  // Avatar
+  avatar: {
+    name: "avatar",
+    component: React.lazy(() =>
+      import("@/components/ui/avatar").then((mod) => ({
+        default: mod.Avatar,
+      })),
+    ),
+    file: "components/ui/avatar.tsx",
+  },
+  "avatar-demo": {
+    name: "avatar-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/avatar/avatar-demo"),
+    ),
+    file: "registry/examples/avatar/avatar-demo.tsx",
+  },
+  "avatar-sm": {
+    name: "avatar-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/avatar/avatar-sm"),
+    ),
+    file: "registry/examples/avatar/avatar-sm.tsx",
+  },
+  "avatar-lg": {
+    name: "avatar-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/avatar/avatar-lg"),
+    ),
+    file: "registry/examples/avatar/avatar-lg.tsx",
+  },
+  // Checkbox
+  checkbox: {
+    name: "checkbox",
+    component: React.lazy(() =>
+      import("@/components/ui/checkbox").then((mod) => ({
+        default: mod.Checkbox,
+      })),
+    ),
+    file: "components/ui/checkbox.tsx",
+  },
+  "checkbox-demo": {
+    name: "checkbox-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/checkbox/checkbox-demo"),
+    ),
+    file: "registry/examples/checkbox/checkbox-demo.tsx",
+  },
+  "checkbox-group": {
+    name: "checkbox-group",
+    component: React.lazy(() =>
+      import("@/components/ui/checkbox").then((mod) => ({
+        default: mod.CheckboxGroup,
+      })),
+    ),
+    file: "components/ui/checkbox.tsx",
+  },
+  "checkbox-group-demo": {
+    name: "checkbox-group-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/checkbox/checkbox-group"),
+    ),
+    file: "registry/examples/checkbox/checkbox-group.tsx",
+  },
+  // Collapsible
+  collapsible: {
+    name: "collapsible",
+    component: React.lazy(() =>
+      import("@/components/ui/collapsible").then((mod) => ({
+        default: mod.Collapsible,
+      })),
+    ),
+    file: "components/ui/collapsible.tsx",
+  },
+  "collapsible-demo": {
+    name: "collapsible-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/collapsible/collapsible-demo"),
+    ),
+    file: "registry/examples/collapsible/collapsible-demo.tsx",
+  },
+  // Dialog
+  dialog: {
+    name: "dialog",
+    component: React.lazy(() =>
+      import("@/components/ui/dialog").then((mod) => ({
+        default: mod.Dialog,
+      })),
+    ),
+    file: "components/ui/dialog.tsx",
+  },
+  "dialog-demo": {
+    name: "dialog-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/dialog/dialog-demo"),
+    ),
+    file: "registry/examples/dialog/dialog-demo.tsx",
+  },
+  // Input
+  input: {
+    name: "input",
+    component: React.lazy(() =>
+      import("@/components/ui/input").then((mod) => ({
+        default: mod.Input,
+      })),
+    ),
+    file: "components/ui/input.tsx",
+  },
+  "input-demo": {
+    name: "input-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/input/input-demo"),
+    ),
+    file: "registry/examples/input/input-demo.tsx",
+  },
+  "input-sm": {
+    name: "input-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/input/input-sm"),
+    ),
+    file: "registry/examples/input/input-sm.tsx",
+  },
+  "input-lg": {
+    name: "input-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/input/input-lg"),
+    ),
+    file: "registry/examples/input/input-lg.tsx",
+  },
+  // Label
+  label: {
+    name: "label",
+    component: React.lazy(() =>
+      import("@/components/ui/label").then((mod) => ({
+        default: mod.Label,
+      })),
+    ),
+    file: "components/ui/label.tsx",
+  },
+  "label-demo": {
+    name: "label-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/label/label-demo"),
+    ),
+    file: "registry/examples/label/label-demo.tsx",
+  },
+  // Popover
+  popover: {
+    name: "popover",
+    component: React.lazy(() =>
+      import("@/components/ui/popover").then((mod) => ({
+        default: mod.Popover,
+      })),
+    ),
+    file: "components/ui/popover.tsx",
+  },
+  "popover-demo": {
+    name: "popover-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/popover/popover-demo"),
+    ),
+    file: "registry/examples/popover/popover-demo.tsx",
+  },
+  // Progress
+  progress: {
+    name: "progress",
+    component: React.lazy(() =>
+      import("@/components/ui/progress").then((mod) => ({
+        default: mod.Progress as React.ComponentType,
+      })),
+    ),
+    file: "components/ui/progress.tsx",
+  },
+  "progress-demo": {
+    name: "progress-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/progress/progress-demo"),
+    ),
+    file: "registry/examples/progress/progress-demo.tsx",
+  },
+  // Radio
+  radio: {
+    name: "radio",
+    component: React.lazy(() =>
+      import("@/components/ui/radio").then((mod) => ({
+        default: mod.RadioGroup,
+      })),
+    ),
+    file: "components/ui/radio.tsx",
+  },
+  "radio-demo": {
+    name: "radio-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/radio/radio-demo"),
+    ),
+    file: "registry/examples/radio/radio-demo.tsx",
+  },
+  // Separator
+  separator: {
+    name: "separator",
+    component: React.lazy(() =>
+      import("@/components/ui/separator").then((mod) => ({
+        default: mod.Separator,
+      })),
+    ),
+    file: "components/ui/separator.tsx",
+  },
+  "separator-demo": {
+    name: "separator-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/separator/separator-demo"),
+    ),
+    file: "registry/examples/separator/separator-demo.tsx",
+  },
+  // Skeleton
+  skeleton: {
+    name: "skeleton",
+    component: React.lazy(() =>
+      import("@/components/ui/skeleton").then((mod) => ({
+        default: mod.Skeleton,
+      })),
+    ),
+    file: "components/ui/skeleton.tsx",
+  },
+  "skeleton-demo": {
+    name: "skeleton-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/skeleton/skeleton-demo"),
+    ),
+    file: "registry/examples/skeleton/skeleton-demo.tsx",
+  },
+  // Slider
+  slider: {
+    name: "slider",
+    component: React.lazy(() =>
+      import("@/components/ui/slider").then((mod) => ({
+        default: mod.Slider,
+      })),
+    ),
+    file: "components/ui/slider.tsx",
+  },
+  "slider-demo": {
+    name: "slider-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/slider/slider-demo"),
+    ),
+    file: "registry/examples/slider/slider-demo.tsx",
+  },
+  "slider-range": {
+    name: "slider-range",
+    component: React.lazy(
+      () => import("@/registry/examples/slider/slider-range"),
+    ),
+    file: "registry/examples/slider/slider-range.tsx",
+  },
+  // Switch
+  switch: {
+    name: "switch",
+    component: React.lazy(() =>
+      import("@/components/ui/switch").then((mod) => ({
+        default: mod.Switch,
+      })),
+    ),
+    file: "components/ui/switch.tsx",
+  },
+  "switch-demo": {
+    name: "switch-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/switch/switch-demo"),
+    ),
+    file: "registry/examples/switch/switch-demo.tsx",
+  },
+  // Tabs
+  tabs: {
+    name: "tabs",
+    component: React.lazy(() =>
+      import("@/components/ui/tabs").then((mod) => ({
+        default: mod.Tabs,
+      })),
+    ),
+    file: "components/ui/tabs.tsx",
+  },
+  "tabs-demo": {
+    name: "tabs-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/tabs/tabs-demo"),
+    ),
+    file: "registry/examples/tabs/tabs-demo.tsx",
+  },
+  "tabs-vertical": {
+    name: "tabs-vertical",
+    component: React.lazy(
+      () => import("@/registry/examples/tabs/tabs-vertical"),
+    ),
+    file: "registry/examples/tabs/tabs-vertical.tsx",
+  },
+  // Toggle
+  toggle: {
+    name: "toggle",
+    component: React.lazy(() =>
+      import("@/components/ui/toggle").then((mod) => ({
+        default: mod.Toggle,
+      })),
+    ),
+    file: "components/ui/toggle.tsx",
+  },
+  "toggle-demo": {
+    name: "toggle-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle/toggle-demo"),
+    ),
+    file: "registry/examples/toggle/toggle-demo.tsx",
+  },
+  "toggle-outline": {
+    name: "toggle-outline",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle/toggle-outline"),
+    ),
+    file: "registry/examples/toggle/toggle-outline.tsx",
+  },
+  "toggle-sm": {
+    name: "toggle-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle/toggle-sm"),
+    ),
+    file: "registry/examples/toggle/toggle-sm.tsx",
+  },
+  "toggle-lg": {
+    name: "toggle-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle/toggle-lg"),
+    ),
+    file: "registry/examples/toggle/toggle-lg.tsx",
+  },
+  "toggle-with-icon": {
+    name: "toggle-with-icon",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle/toggle-with-icon"),
+    ),
+    file: "registry/examples/toggle/toggle-with-icon.tsx",
+  },
+  "toggle-disabled": {
+    name: "toggle-disabled",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle/toggle-disabled"),
+    ),
+    file: "registry/examples/toggle/toggle-disabled.tsx",
+  },
+  // Toggle Group
+  "toggle-group": {
+    name: "toggle-group",
+    component: React.lazy(() =>
+      import("@/components/ui/toggle-group").then((mod) => ({
+        default: mod.ToggleGroup,
+      })),
+    ),
+    file: "components/ui/toggle-group.tsx",
+  },
+  "toggle-group-demo": {
+    name: "toggle-group-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle-group/toggle-group-demo"),
+    ),
+    file: "registry/examples/toggle-group/toggle-group-demo.tsx",
+  },
+  "toggle-group-outline": {
+    name: "toggle-group-outline",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle-group/toggle-group-outline"),
+    ),
+    file: "registry/examples/toggle-group/toggle-group-outline.tsx",
+  },
+  "toggle-group-sm": {
+    name: "toggle-group-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle-group/toggle-group-sm"),
+    ),
+    file: "registry/examples/toggle-group/toggle-group-sm.tsx",
+  },
+  "toggle-group-lg": {
+    name: "toggle-group-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle-group/toggle-group-lg"),
+    ),
+    file: "registry/examples/toggle-group/toggle-group-lg.tsx",
+  },
+  "toggle-group-vertical": {
+    name: "toggle-group-vertical",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle-group/toggle-group-vertical"),
+    ),
+    file: "registry/examples/toggle-group/toggle-group-vertical.tsx",
+  },
+  "toggle-group-disabled": {
+    name: "toggle-group-disabled",
+    component: React.lazy(
+      () => import("@/registry/examples/toggle-group/toggle-group-disabled"),
+    ),
+    file: "registry/examples/toggle-group/toggle-group-disabled.tsx",
+  },
+  // Tooltip
+  tooltip: {
+    name: "tooltip",
+    component: React.lazy(() =>
+      import("@/components/ui/tooltip").then((mod) => ({
+        default: mod.Tooltip,
+      })),
+    ),
+    file: "components/ui/tooltip.tsx",
+  },
+  "tooltip-demo": {
+    name: "tooltip-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/tooltip/tooltip-demo"),
+    ),
+    file: "registry/examples/tooltip/tooltip-demo.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {
