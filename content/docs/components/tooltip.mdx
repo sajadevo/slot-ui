@@ -1,0 +1,46 @@
+---
+title: Tooltip
+description: A small popup that surfaces helpful text when hovering or focusing on an element.
+---
+
+<ComponentPreview name="tooltip-demo">
+  <ComponentSource name="tooltip-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/tooltip
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="tooltip"
+    title="components/ui/tooltip.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipPopup,
+} from "@/components/ui/tooltip";
+```
+
+```tsx
+<Tooltip>
+  <TooltipTrigger>Hover</TooltipTrigger>
+  <TooltipPopup>Tooltip content</TooltipPopup>
+</Tooltip>
+```
