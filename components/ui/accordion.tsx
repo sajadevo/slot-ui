@@ -17,7 +17,7 @@ const accordionItemVariants = cva(
         solid:
           "bg-accent text-accent-foreground rounded-[if(style(--shape:squircle):1.5rem;else:var(--radius-lg))] my-2 px-4",
         outline:
-          "border text-foreground rounded-[if(style(--shape:squircle):1.5rem;else:var(--radius-lg))] shadow-xs my-2 px-4",
+          "border text-foreground rounded-[if(style(--shape:squircle):1.5rem;else:var(--radius-lg))] my-2 px-4",
       },
     },
     defaultVariants: {

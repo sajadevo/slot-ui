@@ -1,0 +1,64 @@
+---
+title: Accordion
+description: Expandable content panels that stack vertically, letting users reveal and hide sections on demand.
+---
+
+<ComponentPreview name="accordion-demo">
+  <ComponentSource name="accordion-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/accordion
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="accordion"
+    title="components/ui/accordion.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionPanel,
+} from "@/components/ui/accordion";
+```
+
+```tsx
+<Accordion>
+  <AccordionItem>
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionPanel>Yes. It adheres to the WAI-ARIA design pattern.</AccordionPanel>
+  </AccordionItem>
+</Accordion>
+```
+
+
+## Examples
+
+### Solid
+
+<ComponentPreview name="accordion-solid">
+  <ComponentSource name="accordion-solid" />
+</ComponentPreview>
+
+### Outline
+
+<ComponentPreview name="accordion-outline">
+  <ComponentSource name="accordion-outline" />
+</ComponentPreview>
