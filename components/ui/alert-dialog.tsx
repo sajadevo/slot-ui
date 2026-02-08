@@ -29,7 +29,7 @@ function AlertDialogBackdrop({
     <AlertDialogPrimitive.Backdrop
       data-slot="alert-dialog-backdrop"
       className={cn(
-        "fixed inset-0 z-50 min-h-dvh bg-black/50 transition-all duration-150 data-ending-style:opacity-0 data-starting-style:opacity-0 supports-[-webkit-touch-callout:none]:absolute",
+        "fixed inset-0 z-50 min-h-dvh bg-black/50 backdrop-blur transition-all duration-150 data-ending-style:opacity-0 data-starting-style:opacity-0 supports-[-webkit-touch-callout:none]:absolute",
         className,
       )}
       {...props}
@@ -61,7 +61,7 @@ function AlertDialogPopup({
         <AlertDialogPrimitive.Popup
           data-slot="alert-dialog-popup"
           className={cn(
-            "bg-popover fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-1/2 gap-6 rounded-[if(style(--shape:squircle):3rem;else:var(--radius-xl))] border p-6 shadow-xl transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0 sm:max-w-lg",
+            "bg-popover fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-1/2 gap-6 rounded-[if(style(--shape:squircle):2.375rem;else:var(--radius-xl))] border p-6 shadow-xl transition-all duration-200 [corner-shape:var(--shape)] data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0 sm:max-w-md",
             className,
           )}
           {...props}

@@ -1,0 +1,62 @@
+---
+title: Alert Dialog
+description: A blocking modal that demands user attention for critical confirmations or destructive actions before proceeding.
+---
+
+<ComponentPreview name="alert-dialog-demo">
+  <ComponentSource name="alert-dialog-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/alert-dialog
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="alert-dialog"
+    title="components/ui/alert-dialog.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogPopup,
+  AlertDialogHeader,
+  AlertDialogFooter,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogClose,
+} from "@/components/ui/alert-dialog";
+```
+
+```tsx
+<AlertDialog>
+  <AlertDialogTrigger>Open</AlertDialogTrigger>
+  <AlertDialogPopup>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogClose>Cancel</AlertDialogClose>
+      <AlertDialogClose>Continue</AlertDialogClose>
+    </AlertDialogFooter>
+  </AlertDialogPopup>
+</AlertDialog>
+```
