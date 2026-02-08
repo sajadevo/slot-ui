@@ -86,6 +86,7 @@ export default async function Page(props: {
               <Button
                 variant="secondary"
                 nativeButton={false}
+                className="ml-auto"
                 render={<Link href={neighbours.next.url} />}
               >
                 {neighbours.next.name}
