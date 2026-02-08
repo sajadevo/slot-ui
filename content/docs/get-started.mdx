@@ -1,49 +1,19 @@
 ---
 title: Get Started
-description: A quick guide to setting up Slot UI and adding your first component.
+description: A quick guide to adding your first component.
 ---
 
 ## Prerequisites
 
-Slot UI components require a React project with [Tailwind CSS v4](https://tailwindcss.com) installed.
-
-## Add the Stylesheet
-
-Slot UI uses a design token system powered by CSS variables and Tailwind CSS. Add the stylesheet to your project's global CSS file:
-
-```css title="styles/globals.css"
-@import "tailwindcss";
-@import "./slot-ui.css";
-```
-
-The `slot-ui.css` file defines all the design tokens — colors, radii, fonts, and more. You can customize any of these to match your brand.
-
-## Install Dependencies
-
-Slot UI components are built on top of a few core dependencies:
-
-```bash
-npm install @base-ui/react class-variance-authority clsx tailwind-merge lucide-react
-```
-
-Then add the `cn` utility to your project:
-
-```ts title="lib/utils.ts"
-import { twMerge } from "tailwind-merge";
-import { clsx, type ClassValue } from "clsx";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
-```
+Slot UI components require a React project with [Tailwind CSS](https://tailwindcss.com) installed.
 
 ## Adding Components
 
-You can add components automatically with the CLI or manually by copying the source code.
+You can add components using the CLI or manually by copying the source code.
 
-### With the CLI
+### With the shadcn CLI
 
-Each component page includes a CLI command that handles installation and dependencies for you:
+Slot UI uses the <a href="https://ui.shadcn.com/docs/cli" target="_blank">shadcn CLI</a> for component distribution. Each component page includes a command that handles installation, dependencies, and styling for you:
 
 ```bash
 npx shadcn@latest add @slot/button
@@ -57,45 +27,27 @@ npx shadcn@latest add @slot/ui
 
 ### Manually
 
-1. Find the component you need on the components page
-2. Switch to the **Manual** tab in the installation section
-3. Copy the source code into your project (e.g. `components/ui/button.tsx`)
-4. Install any listed dependencies
-5. Import and use the component
+1. Install <a href="https://base-ui.com/react/overview/quick-start" target="_blank" className="font-medium underline underline-offset-4">Base UI</a> in your project
+2. Find the component you need on the components page
+3. Switch to the **Manual** tab in the installation section
+4. Copy the source code into your project (e.g. `components/ui/button.tsx`)
+5. Install all the required dependencies
+6. Import and use the component
 
-## Customization
+## Dark Mode
 
-### Design Tokens
+Slot UI includes dark mode support out of the box. If you're using `next-themes`, it works automatically.
 
-All design tokens are defined as CSS variables in `slot-ui.css` and can be customized in your global stylesheet. Here are the key tokens:
-
-```css
-@theme {
-  /* Colors */
-  --color-primary: var(--color-blue-500);
-  --color-secondary: var(--color-neutral-100);
-  --color-destructive: var(--color-red-500);
-  --color-success: var(--color-green-600);
-  --color-warning: var(--color-amber-500);
-
-  /* Shape */
-  --shape: squircle; /* round | square | squircle */
-  --radius: 3rem;
-
-  /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-```
-
-### Dark Mode
-
-Slot UI includes dark mode support out of the box. Dark mode tokens are defined under the `.dark` class in `slot-ui.css`. If you're using `next-themes`, it works automatically.
-
-### Corner Shape
+## Corner Shape
 
 Slot UI supports three corner shape modes via the `--shape` CSS variable:
 
-- `round` — standard rounded corners
-- `square` — sharp corners
-- `squircle` — smooth superellipse corners (default)
+```css
+@theme {
+  --shape: squircle; /* round | square | squircle */
+}
+```
+
+- **round**: Standard rounded corners using traditional `border-radius`. The most common and widely supported shape across all browsers.
+- **square**: Sharp, straight corners with no rounding. Best suited for minimal, geometric, or brutalist design styles.
+- **squircle**: Smooth superellipse corners that produce a continuous curvature, similar to iOS app icons. This is the default shape in Slot UI and uses the CSS `corner-shape` property for a more natural, organic feel compared to standard rounding.
