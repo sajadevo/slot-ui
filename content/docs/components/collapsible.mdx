@@ -1,0 +1,46 @@
+---
+title: Collapsible
+description: A primitive for building expandable sections that smoothly animate between open and closed states.
+---
+
+<ComponentPreview name="collapsible-demo">
+  <ComponentSource name="collapsible-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add @slot/collapsible
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="collapsible"
+    title="components/ui/collapsible.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsiblePanel,
+} from "@/components/ui/collapsible";
+```
+
+```tsx
+<Collapsible>
+  <CollapsibleTrigger>Toggle</CollapsibleTrigger>
+  <CollapsiblePanel>Content</CollapsiblePanel>
+</Collapsible>
+```

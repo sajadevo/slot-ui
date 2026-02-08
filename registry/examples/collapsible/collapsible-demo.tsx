@@ -1,0 +1,24 @@
+import {
+  Collapsible,
+  CollapsiblePanel,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { ChevronDownIcon } from "lucide-react";
+
+export default function CollapsibleDemo() {
+  return (
+    <Collapsible>
+      <CollapsibleTrigger className="bg-accent inline-flex items-center gap-2 rounded-md py-2 pr-4 pl-3 text-sm font-medium [corner-shape:var(--shape)] data-panel-open:[&_svg]:rotate-180">
+        <ChevronDownIcon className="size-4" />
+        View system requirements
+      </CollapsibleTrigger>
+      <CollapsiblePanel>
+        <ul className="[&>li]:bg-accent mt-1 space-y-1 [&>li]:w-full [&>li]:rounded-md [&>li]:p-2 [&>li]:pl-9 [&>li]:text-sm [&>li]:[corner-shape:var(--shape)]">
+          <li>Node.js 18.x or higher</li>
+          <li>React 18 or higher</li>
+          <li>Tailwind CSS 4.x</li>
+        </ul>
+      </CollapsiblePanel>
+    </Collapsible>
+  );
+}
