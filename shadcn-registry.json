@@ -72,7 +72,6 @@
         }
       },
       "css": {
-        "@custom-variant dark": "(&:is(.dark *))",
         "@utility corner-shape": {
           "@supports (corner-shape: round)": {
             "corner-shape": "var(--shape)"
