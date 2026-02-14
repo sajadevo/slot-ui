@@ -35,8 +35,8 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --shape: squircle; /* round | square | squircle */
-  --radius: 3rem; /* 10px */
+  --shape: round; /* round | square | squircle */
+  --radius: 0.625rem; /* 10px */
 
   --radius-xs: calc(var(--radius) - 6px); /* 4px */
   --radius-sm: calc(var(--radius) - 4px); /* 6px */
@@ -79,9 +79,56 @@
   --color-warning-foreground: var(--color-amber-500);
 }
 
+@supports (corner-shape: round) {
+  :root {
+    --shape: squircle;
+    --radius: 3rem;
+  }
+}
+
 @utility corner-shape {
-  @supports (corner-shape: round) {
-    corner-shape: var(--shape);
+  corner-shape: var(--shape);
+}
+
+@utility rounded-container {
+  border-radius: var(--radius-lg);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):1.5rem;else:var(--radius-lg));
+  }
+}
+
+@utility rounded-card {
+  border-radius: var(--radius-xl);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):1.75rem;else:var(--radius-xl));
+  }
+}
+
+@utility rounded-accordion {
+  border-radius: var(--radius-lg);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):1.5rem;else:var(--radius-lg));
+  }
+}
+
+@utility rounded-tabs {
+  border-radius: var(--radius-md);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):1.25rem;else:var(--radius-md));
+  }
+}
+
+@utility rounded-popover {
+  border-radius: var(--radius-xl);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):2rem;else:var(--radius-xl));
+  }
+}
+
+@utility rounded-dialog {
+  border-radius: var(--radius-xl);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):2.375rem;else:var(--radius-xl));
   }
 }
 

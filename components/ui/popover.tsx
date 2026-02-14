@@ -65,7 +65,7 @@ function PopoverPopup({
         <PopoverPrimitive.Popup
           data-slot="popover-Popup"
           className={cn(
-            "bg-popover text-foreground origin-(--transform-origin) rounded-[if(style(--shape:squircle):2rem;else:var(--radius-xl))] border p-4 text-balance shadow-xs transition-all duration-200 corner-shape data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
+            "bg-popover text-foreground origin-(--transform-origin) rounded-popover border p-4 text-balance shadow-xs transition-all duration-200 corner-shape data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0",
             className,
           )}
           {...props}

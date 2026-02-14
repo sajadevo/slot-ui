@@ -59,7 +59,7 @@ export function ComponentPreview({
     <div
       data-slot="component-preview"
       className={cn(
-        "group relative my-4 flex flex-col overflow-hidden rounded-[if(style(--shape:squircle):1.75rem;else:var(--radius-xl))] border corner-shape",
+        "group relative my-4 flex flex-col overflow-hidden rounded-card border corner-shape",
         className,
       )}
       {...props}

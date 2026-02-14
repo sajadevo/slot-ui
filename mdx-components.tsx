@@ -162,7 +162,7 @@ export const mdxComponents = {
     return (
       <figure
         className={cn(
-          "relative my-4 overflow-hidden rounded-[if(style(--shape:squircle):1.75rem;else:var(--radius-xl))] border text-sm corner-shape",
+          "relative my-4 overflow-hidden rounded-container border text-sm corner-shape",
           className,
         )}
         {...props}
