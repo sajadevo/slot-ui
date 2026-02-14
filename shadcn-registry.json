@@ -106,6 +106,35 @@
       ]
     },
     {
+      "name": "ui",
+      "type": "registry:item",
+      "title": "All Components",
+      "description": "Install all Slot UI components.",
+      "registryDependencies": [
+        "accordion",
+        "alert-dialog",
+        "avatar",
+        "button",
+        "checkbox",
+        "collapsible",
+        "dialog",
+        "input",
+        "label",
+        "popover",
+        "progress",
+        "radio",
+        "separator",
+        "skeleton",
+        "slider",
+        "switch",
+        "tabs",
+        "toggle",
+        "toggle-group",
+        "tooltip"
+      ],
+      "files": []
+    },
+    {
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
