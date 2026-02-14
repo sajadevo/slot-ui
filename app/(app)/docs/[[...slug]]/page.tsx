@@ -1,13 +1,46 @@
+import type { Metadata } from "next";
 import { DocsTableOfContents } from "@/components/docs-toc";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 
+import { siteConfig } from "@/lib/config";
 import { source } from "@/lib/source";
 import { mdxComponents } from "@/mdx-components";
 import { findNeighbour } from "fumadocs-core/page-tree";
 import { notFound } from "next/navigation";
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
+  const params = await props.params;
+  const page = source.getPage(params.slug);
+
+  if (!page) return {};
+
+  return {
+    title: page.data.title,
+    description: page.data.description,
+    openGraph: {
+      title: page.data.title,
+      description: page.data.description,
+      type: "article",
+      url: `${siteConfig.url}${page.url}`,
+      siteName: siteConfig.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: page.data.title,
+      description: page.data.description,
+      creator: "@sajadevo",
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return source.generateParams();
+}
 
 export default async function Page(props: {
   params: Promise<{ slug: string[] }>;

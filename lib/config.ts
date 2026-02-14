@@ -9,12 +9,8 @@ export const siteConfig = {
   },
   navItems: [
     {
-      href: "/docs/installation",
+      href: "/docs/get-started",
       label: "Docs",
-    },
-    {
-      href: "/docs/components",
-      label: "Components",
     },
   ],
 };
