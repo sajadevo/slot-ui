@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./slot-ui.css";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   --header-height: calc(var(--spacing) * 14);
   --sidebar-width: calc(var(--spacing) * 50);
