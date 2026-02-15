@@ -20,11 +20,15 @@
       "name": "utils",
       "type": "registry:lib",
       "description": "Utility functions for Slot UI components.",
-      "dependencies": ["tailwind-merge", "clsx"],
+      "dependencies": [
+        "tailwind-merge",
+        "clsx"
+      ],
       "files": [
         {
           "path": "lib/utils.ts",
-          "type": "registry:lib"
+          "type": "registry:file",
+          "target": "~/lib/utils.ts"
         }
       ]
     },
@@ -62,12 +66,20 @@
       "type": "registry:ui",
       "title": "Accordion",
       "description": "Expandable content panels that stack vertically, letting users reveal and hide sections on demand.",
-      "dependencies": ["@base-ui/react", "class-variance-authority", "lucide-react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/accordion.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/accordion.tsx"
         }
       ]
     },
@@ -76,12 +88,18 @@
       "type": "registry:ui",
       "title": "Alert Dialog",
       "description": "A modal dialog that interrupts the user with important content and expects a response.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/alert-dialog.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/alert-dialog.tsx"
         }
       ]
     },
@@ -90,12 +108,19 @@
       "type": "registry:ui",
       "title": "Avatar",
       "description": "An image element with a fallback for representing the user.",
-      "dependencies": ["@base-ui/react", "class-variance-authority"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/avatar.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/avatar.tsx"
         }
       ]
     },
@@ -104,12 +129,19 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "A clickable element for triggering actions and submitting forms, available in multiple variants and sizes.",
-      "dependencies": ["@base-ui/react", "class-variance-authority"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/button.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/button.tsx"
         }
       ]
     },
@@ -118,12 +150,19 @@
       "type": "registry:ui",
       "title": "Checkbox",
       "description": "A control that allows the user to toggle between checked and unchecked states.",
-      "dependencies": ["@base-ui/react", "lucide-react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/checkbox.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/checkbox.tsx"
         }
       ]
     },
@@ -132,12 +171,18 @@
       "type": "registry:ui",
       "title": "Collapsible",
       "description": "An interactive component which expands and collapses content.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/collapsible.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/collapsible.tsx"
         }
       ]
     },
@@ -146,12 +191,19 @@
       "type": "registry:ui",
       "title": "Dialog",
       "description": "A modal window that renders on top of the main content.",
-      "dependencies": ["@base-ui/react", "lucide-react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/dialog.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/dialog.tsx"
         }
       ]
     },
@@ -160,12 +212,19 @@
       "type": "registry:ui",
       "title": "Input",
       "description": "A text input field for capturing user input.",
-      "dependencies": ["@base-ui/react", "class-variance-authority"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/input.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/input.tsx"
         }
       ]
     },
@@ -174,11 +233,15 @@
       "type": "registry:ui",
       "title": "Label",
       "description": "A text label for form fields and controls.",
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/label.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/label.tsx"
         }
       ]
     },
@@ -187,12 +250,18 @@
       "type": "registry:ui",
       "title": "Popover",
       "description": "A floating panel anchored to a trigger element.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/popover.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/popover.tsx"
         }
       ]
     },
@@ -201,12 +270,18 @@
       "type": "registry:ui",
       "title": "Progress",
       "description": "A visual indicator showing the completion progress of a task.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/progress.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/progress.tsx"
         }
       ]
     },
@@ -215,12 +290,18 @@
       "type": "registry:ui",
       "title": "Radio",
       "description": "A set of selectable options where only one can be selected at a time.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/radio.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/radio.tsx"
         }
       ]
     },
@@ -229,12 +310,18 @@
       "type": "registry:ui",
       "title": "Separator",
       "description": "A visual divider between content sections.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/separator.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/separator.tsx"
         }
       ]
     },
@@ -243,11 +330,15 @@
       "type": "registry:ui",
       "title": "Skeleton",
       "description": "A placeholder loading state for content.",
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/skeleton.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/skeleton.tsx"
         }
       ]
     },
@@ -256,12 +347,18 @@
       "type": "registry:ui",
       "title": "Slider",
       "description": "A control for selecting a numeric value within a range.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/slider.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/slider.tsx"
         }
       ]
     },
@@ -270,12 +367,18 @@
       "type": "registry:ui",
       "title": "Switch",
       "description": "A toggle control for switching between on and off states.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/switch.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/switch.tsx"
         }
       ]
     },
@@ -284,12 +387,18 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "A set of layered content panels displayed one at a time.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/tabs.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/tabs.tsx"
         }
       ]
     },
@@ -298,12 +407,19 @@
       "type": "registry:ui",
       "title": "Toggle",
       "description": "A two-state button that can be toggled on or off.",
-      "dependencies": ["@base-ui/react", "class-variance-authority"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/toggle.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/toggle.tsx"
         }
       ]
     },
@@ -312,12 +428,20 @@
       "type": "registry:ui",
       "title": "Toggle Group",
       "description": "A group of toggle buttons where one or multiple can be active.",
-      "dependencies": ["@base-ui/react", "class-variance-authority"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json", "https://slot-ui.com/r/toggle.json"],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/toggle.json"
+      ],
       "files": [
         {
           "path": "components/ui/toggle-group.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/toggle-group.tsx"
         }
       ]
     },
@@ -326,12 +450,18 @@
       "type": "registry:ui",
       "title": "Tooltip",
       "description": "A floating label that appears on hover to provide additional context.",
-      "dependencies": ["@base-ui/react"],
-      "registryDependencies": ["https://slot-ui.com/r/theme.json", "https://slot-ui.com/r/utils.json"],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
       "files": [
         {
           "path": "components/ui/tooltip.tsx",
-          "type": "registry:ui"
+          "type": "registry:file",
+          "target": "~/components/ui/tooltip.tsx"
         }
       ]
     }
