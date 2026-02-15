@@ -7,6 +7,9 @@
       "name": "theme",
       "type": "registry:file",
       "description": "Slot UI design tokens, dark mode, corner shape utility, and base styles.",
+      "css": {
+        "@import \"../styles/slot-ui.css\"": {}
+      },
       "docs": "Import slot-ui.css in your main CSS file:\n\n  @import \"../styles/slot-ui.css\"\n",
       "files": [
         {
