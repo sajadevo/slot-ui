@@ -7,7 +7,7 @@
       "name": "theme",
       "type": "registry:file",
       "description": "Slot UI design tokens, dark mode, corner shape utility, and base styles.",
-      "docs": "Add the following import to the top of your main CSS file (e.g. app/globals.css, src/index.css):\n\n  @import \"../styles/slot-ui.css\";\n",
+      "docs": "Import slot-ui styles in your CSS file (after @import \"tailwindcss\"):\n\n  @import \"~/styles/slot-ui.css\";\n",
       "css": {
         "@import \"../styles/slot-ui.css\"": {}
       },
