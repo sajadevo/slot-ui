@@ -34,13 +34,13 @@
   --shape: round; /* round | square | squircle */
   --radius: 0.625rem; /* 10px */
 
-  --radius-xs: calc(var(--radius) - 6px); /* 4px */
-  --radius-sm: calc(var(--radius) - 4px); /* 6px */
-  --radius-md: calc(var(--radius) - 2px); /* 8px */
-  --radius-lg: var(--radius); /* 10px */
-  --radius-xl: calc(var(--radius) + 6px); /* 16px */
-  --radius-2xl: calc(var(--radius) + 10px); /* 20px */
-  --radius-3xl: calc(var(--radius) + 16px); /* 26px */
+  --radius-xs: calc(var(--radius) - 8px); /* 2px */
+  --radius-sm: calc(var(--radius) - 6px); /* 4px */
+  --radius-md: calc(var(--radius) - 4px); /* 6px */
+  --radius-lg: calc(var(--radius) - 2px); /* 8px */
+  --radius-xl: calc(var(--radius) + 2px); /* 12px */
+  --radius-2xl: calc(var(--radius) + 6px); /* 16px */
+  --radius-3xl: calc(var(--radius) + 14px); /* 24px */
   --radius-4xl: calc(var(--radius) + 22px); /* 32px */
   --radius-full: calc(var(--radius) * infinity); /* infinity */
 }
@@ -79,7 +79,7 @@
 @supports (corner-shape: round) {
   :root {
     --shape: squircle;
-    --radius: 3rem;
+    --radius: 1rem;
   }
 }
 
@@ -90,42 +90,35 @@
 @utility rounded-container {
   border-radius: var(--radius-lg);
   @supports (border-radius: if(style(--shape: squircle): 0)) {
-    border-radius: if(style(--shape:squircle):1.5rem;else:var(--radius-lg));
+    border-radius: if(style(--shape:squircle):1.125rem;else:var(--radius-lg));
   }
 }
 
 @utility rounded-card {
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   @supports (border-radius: if(style(--shape: squircle): 0)) {
-    border-radius: if(style(--shape:squircle):1.75rem;else:var(--radius-xl));
+    border-radius: if(style(--shape:squircle):1.125rem;else:var(--radius-lg));
   }
 }
 
 @utility rounded-accordion {
   border-radius: var(--radius-lg);
   @supports (border-radius: if(style(--shape: squircle): 0)) {
-    border-radius: if(style(--shape:squircle):1.5rem;else:var(--radius-lg));
-  }
-}
-
-@utility rounded-tabs {
-  border-radius: var(--radius-md);
-  @supports (border-radius: if(style(--shape: squircle): 0)) {
-    border-radius: if(style(--shape:squircle):1.25rem;else:var(--radius-md));
+    border-radius: if(style(--shape:squircle):1.125rem;else:var(--radius-lg));
   }
 }
 
 @utility rounded-popover {
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   @supports (border-radius: if(style(--shape: squircle): 0)) {
-    border-radius: if(style(--shape:squircle):2rem;else:var(--radius-xl));
+    border-radius: if(style(--shape:squircle):1.125rem;else:var(--radius-lg));
   }
 }
 
 @utility rounded-dialog {
   border-radius: var(--radius-xl);
   @supports (border-radius: if(style(--shape: squircle): 0)) {
-    border-radius: if(style(--shape:squircle):2.375rem;else:var(--radius-xl));
+    border-radius: if(style(--shape:squircle):1.5rem;else:var(--radius-xl));
   }
 }
 

@@ -15,9 +15,9 @@ const accordionItemVariants = cva(
       variant: {
         default: "border-b last:border-b-0",
         solid:
-          "bg-accent text-accent-foreground rounded-accordion my-2 px-4",
+          "bg-accent text-accent-foreground rounded-accordion my-1.5 px-3",
         outline:
-          "border text-foreground rounded-accordion my-2 px-4",
+          "border text-foreground rounded-accordion my-1.5 px-3",
       },
     },
     defaultVariants: {
@@ -81,7 +81,7 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "flex flex-1 items-start justify-between gap-4 py-4 text-start text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50",
+          "flex flex-1 items-start justify-between gap-4 py-3 text-start text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50",
           className,
         )}
         {...props}

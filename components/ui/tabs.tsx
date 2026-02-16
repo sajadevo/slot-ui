@@ -22,7 +22,7 @@ function TabsList({ className, children, ...props }: TabsPrimitive.List.Props) {
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "bg-muted text-muted-foreground relative z-0 flex w-fit items-center justify-center rounded-md p-0.5 corner-shape data-[orientation=vertical]:flex-col data-[orientation=vertical]:rounded-tabs",
+        "bg-muted text-muted-foreground relative z-0 flex w-fit items-center justify-center rounded-md p-0.5 corner-shape data-[orientation=vertical]:flex-col",
         className,
       )}
       {...props}
@@ -43,7 +43,7 @@ function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
     <TabsPrimitive.Tab
       data-slot="tabs-trigger"
       className={cn(
-        "text-muted-foreground data-active:text-foreground flex h-8 shrink-0 grow items-center justify-center gap-2 rounded-[calc(var(--radius-md)-2px)] px-4 text-sm font-medium whitespace-nowrap transition-all duration-200 outline-none corner-shape data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[orientation=vertical]:w-full [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        "text-muted-foreground data-active:text-foreground flex h-7 shrink-0 grow items-center justify-center gap-2 rounded-[calc(var(--radius-md)-2px)] px-3 text-sm font-medium whitespace-nowrap transition-all duration-200 outline-none corner-shape data-disabled:cursor-not-allowed data-disabled:opacity-50 data-[orientation=vertical]:w-full [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}

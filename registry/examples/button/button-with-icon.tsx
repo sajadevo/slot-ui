@@ -3,7 +3,7 @@ import { MailIcon } from "lucide-react";
 
 export default function ButtonWithIcon() {
   return (
-    <Button>
+    <Button size='lg'>
       <MailIcon />
       Login with Email
     </Button>

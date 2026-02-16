@@ -16,9 +16,9 @@ const toggleVariants = cva(
           "border bg-transparent not-disabled:hover:bg-accent/50 data-pressed:bg-accent/50 data-pressed:shadow-none",
       },
       size: {
-        default: "h-9 px-3.5 min-w-9",
-        sm: "h-8 px-3 min-w-8 [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-10 px-4 min-w-10 [&_svg:not([class*='size-'])]:size-5",
+        default: "h-8 px-3 min-w-8",
+        sm: "h-7 px-2.5 has-[>svg]:px-1.5 min-w-7",
+        lg: "h-10 px-4 min-w-10",
       },
     },
     defaultVariants: {
