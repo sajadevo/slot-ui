@@ -96,7 +96,8 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/button.json"
       ],
       "files": [
         {
@@ -159,7 +160,8 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/label.json"
       ],
       "files": [
         {
@@ -200,7 +202,10 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/button.json",
+        "https://slot-ui.com/r/input.json",
+        "https://slot-ui.com/r/label.json"
       ],
       "files": [
         {
@@ -238,7 +243,8 @@
       "description": "A text label for form fields and controls.",
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/input.json"
       ],
       "files": [
         {
@@ -258,7 +264,8 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/button.json"
       ],
       "files": [
         {
@@ -298,7 +305,8 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/label.json"
       ],
       "files": [
         {
@@ -375,7 +383,8 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/label.json"
       ],
       "files": [
         {
@@ -458,7 +467,8 @@
       ],
       "registryDependencies": [
         "https://slot-ui.com/r/theme.json",
-        "https://slot-ui.com/r/utils.json"
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/button.json"
       ],
       "files": [
         {
