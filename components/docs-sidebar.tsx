@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button";
 
 import { usePathname } from "next/navigation";
 import { docsRegistry, type RegistryItem } from "@/lib/docs-registry";
+import { cn } from "@/lib/utils";
 
 const tagConfig = {
   new: { label: "New", variant: "info" as const },
-  updated: { label: "Updated", variant: "warning" as const },
+  updated: { label: "Updated", variant: "secondary" as const },
 };
 
 function SidebarTag({ tag }: { tag: NonNullable<RegistryItem["tag"]> }) {
@@ -43,7 +44,9 @@ export function DocsSidebar() {
                       nativeButton={false}
                       render={<Link href={href} />}
                       data-active={pathname === href}
-                      className="data-[active=true]:bg-accent w-full justify-start px-2.5 text-start"
+                      className={cn("data-[active=true]:bg-accent w-full justify-start px-2.5 text-start", {
+                        "pr-1": tag
+                      })}
                     >
                       {label}
                       {tag && <SidebarTag tag={tag} />}
