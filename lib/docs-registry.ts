@@ -1,4 +1,10 @@
-const overviewRegistry = [
+export type RegistryItem = {
+  label: string;
+  href: string;
+  tag?: "new" | "updated";
+};
+
+const overviewRegistry: RegistryItem[] = [
   {
     label: "Introduction",
     href: "/docs",
@@ -9,7 +15,7 @@ const overviewRegistry = [
   },
 ];
 
-const componentsRegistry = [
+const componentsRegistry: RegistryItem[] = [
   {
     label: "Accordion",
     href: "/docs/components/accordion",
@@ -25,6 +31,7 @@ const componentsRegistry = [
   {
     label: "Badge",
     href: "/docs/components/badge",
+    tag: "new",
   },
   {
     label: "Button",

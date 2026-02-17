@@ -1,10 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { usePathname } from "next/navigation";
-import { docsRegistry } from "@/lib/docs-registry";
+import { docsRegistry, type RegistryItem } from "@/lib/docs-registry";
+
+const tagConfig = {
+  new: { label: "New", variant: "info" as const },
+  updated: { label: "Updated", variant: "warning" as const },
+};
+
+function SidebarTag({ tag }: { tag: NonNullable<RegistryItem["tag"]> }) {
+  const { label, variant } = tagConfig[tag];
+  return (
+    <Badge variant={variant} className="ml-auto">
+      {label}
+    </Badge>
+  );
+}
 
 export function DocsSidebar() {
   const pathname = usePathname();
@@ -20,7 +35,7 @@ export function DocsSidebar() {
                 {title}
               </div>
               <ul className="-mx-2.5 space-y-0.5">
-                {registry.map(({ label, href }) => (
+                {registry.map(({ label, href, tag }) => (
                   <li key={href}>
                     <Button
                       size="sm"
@@ -31,6 +46,7 @@ export function DocsSidebar() {
                       className="data-[active=true]:bg-accent w-full justify-start px-2.5 text-start"
                     >
                       {label}
+                      {tag && <SidebarTag tag={tag} />}
                     </Button>
                   </li>
                 ))}
