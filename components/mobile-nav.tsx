@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -12,6 +13,11 @@ import Link from "next/link";
 
 import { docsRegistry } from "@/lib/docs-registry";
 import { usePathname } from "next/navigation";
+
+const tagConfig = {
+  new: { label: "New", variant: "info" as const },
+  updated: { label: "Updated", variant: "secondary" as const },
+};
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -34,7 +40,7 @@ export function MobileNav() {
                   {title}
                 </div>
                 <ul className="-mx-2.5 space-y-0.5">
-                  {registry.map(({ label, href }) => (
+                  {registry.map(({ label, href, tag }) => (
                     <li key={href}>
                       <DialogClose
                         nativeButton={false}
@@ -50,6 +56,11 @@ export function MobileNav() {
                         }
                       >
                         {label}
+                        {tag && (
+                          <Badge variant={tagConfig[tag].variant} className="ml-auto">
+                            {tagConfig[tag].label}
+                          </Badge>
+                        )}
                       </DialogClose>
                     </li>
                   ))}
