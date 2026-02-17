@@ -112,6 +112,98 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/button/button-loading.tsx",
   },
+  // Badge
+  badge: {
+    name: "badge",
+    component: React.lazy(() =>
+      import("@/components/ui/badge").then((mod) => ({ default: mod.Badge })),
+    ),
+    file: "components/ui/badge.tsx",
+  },
+  "badge-demo": {
+    name: "badge-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-demo"),
+    ),
+    file: "registry/examples/badge/badge-demo.tsx",
+  },
+  "badge-secondary": {
+    name: "badge-secondary",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-secondary"),
+    ),
+    file: "registry/examples/badge/badge-secondary.tsx",
+  },
+  "badge-destructive": {
+    name: "badge-destructive",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-destructive"),
+    ),
+    file: "registry/examples/badge/badge-destructive.tsx",
+  },
+  "badge-success": {
+    name: "badge-success",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-success"),
+    ),
+    file: "registry/examples/badge/badge-success.tsx",
+  },
+  "badge-info": {
+    name: "badge-info",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-info"),
+    ),
+    file: "registry/examples/badge/badge-info.tsx",
+  },
+  "badge-warning": {
+    name: "badge-warning",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-warning"),
+    ),
+    file: "registry/examples/badge/badge-warning.tsx",
+  },
+  "badge-outline": {
+    name: "badge-outline",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-outline"),
+    ),
+    file: "registry/examples/badge/badge-outline.tsx",
+  },
+  "badge-ghost": {
+    name: "badge-ghost",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-ghost"),
+    ),
+    file: "registry/examples/badge/badge-ghost.tsx",
+  },
+  "badge-with-icon": {
+    name: "badge-with-icon",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-with-icon"),
+    ),
+    file: "registry/examples/badge/badge-with-icon.tsx",
+  },
+  "badge-with-link": {
+    name: "badge-with-link",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-with-link"),
+    ),
+    file: "registry/examples/badge/badge-with-link.tsx",
+  },
+  "badge-loading": {
+    name: "badge-loading",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-loading"),
+    ),
+    file: "registry/examples/badge/badge-loading.tsx",
+  },
+  "badge-disabled": {
+    name: "badge-disabled",
+    component: React.lazy(
+      () => import("@/registry/examples/badge/badge-disabled"),
+    ),
+    file: "registry/examples/badge/badge-disabled.tsx",
+  },
   // Accordion
   accordion: {
     name: "accordion",

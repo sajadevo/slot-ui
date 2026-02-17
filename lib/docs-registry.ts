@@ -23,6 +23,10 @@ const componentsRegistry = [
     href: "/docs/components/avatar",
   },
   {
+    label: "Badge",
+    href: "/docs/components/badge",
+  },
+  {
     label: "Button",
     href: "/docs/components/button",
   },
