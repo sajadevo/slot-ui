@@ -119,6 +119,13 @@
   }
 }
 
+@utility rounded-alert {
+  border-radius: var(--radius-lg);
+  @supports (border-radius: if(style(--shape: squircle): 0)) {
+    border-radius: if(style(--shape:squircle):1.125rem;else:var(--radius-lg));
+  }
+}
+
 @utility rounded-dialog {
   border-radius: var(--radius-xl);
   @supports (border-radius: if(style(--shape: squircle): 0)) {

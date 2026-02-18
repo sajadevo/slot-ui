@@ -42,6 +42,7 @@
       "description": "Install all Slot UI components.",
       "registryDependencies": [
         "https://slot-ui.com/r/accordion.json",
+        "https://slot-ui.com/r/alert.json",
         "https://slot-ui.com/r/alert-dialog.json",
         "https://slot-ui.com/r/avatar.json",
         "https://slot-ui.com/r/badge.json",
@@ -84,6 +85,26 @@
           "path": "components/ui/accordion.tsx",
           "type": "registry:file",
           "target": "~/components/ui/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:item",
+      "title": "Alert",
+      "description": "A contextual feedback message for displaying important information, warnings, or status updates.",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/alert.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/alert.tsx"
         }
       ]
     },

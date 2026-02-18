@@ -204,6 +204,56 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/badge/badge-disabled.tsx",
   },
+  // Alert
+  alert: {
+    name: "alert",
+    component: React.lazy(() =>
+      import("@/components/ui/alert").then((mod) => ({ default: mod.Alert })),
+    ),
+    file: "components/ui/alert.tsx",
+  },
+  "alert-demo": {
+    name: "alert-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/alert/alert-demo"),
+    ),
+    file: "registry/examples/alert/alert-demo.tsx",
+  },
+  "alert-destructive": {
+    name: "alert-destructive",
+    component: React.lazy(
+      () => import("@/registry/examples/alert/alert-destructive"),
+    ),
+    file: "registry/examples/alert/alert-destructive.tsx",
+  },
+  "alert-success": {
+    name: "alert-success",
+    component: React.lazy(
+      () => import("@/registry/examples/alert/alert-success"),
+    ),
+    file: "registry/examples/alert/alert-success.tsx",
+  },
+  "alert-info": {
+    name: "alert-info",
+    component: React.lazy(
+      () => import("@/registry/examples/alert/alert-info"),
+    ),
+    file: "registry/examples/alert/alert-info.tsx",
+  },
+  "alert-warning": {
+    name: "alert-warning",
+    component: React.lazy(
+      () => import("@/registry/examples/alert/alert-warning"),
+    ),
+    file: "registry/examples/alert/alert-warning.tsx",
+  },
+  "alert-outline": {
+    name: "alert-outline",
+    component: React.lazy(
+      () => import("@/registry/examples/alert/alert-outline"),
+    ),
+    file: "registry/examples/alert/alert-outline.tsx",
+  },
   // Accordion
   accordion: {
     name: "accordion",

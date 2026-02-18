@@ -21,6 +21,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/accordion",
   },
   {
+    label: "Alert",
+    href: "/docs/components/alert",
+    tag: "new",
+  },
+  {
     label: "Alert Dialog",
     href: "/docs/components/alert-dialog",
   },

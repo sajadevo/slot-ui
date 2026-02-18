@@ -1,0 +1,76 @@
+---
+title: Alert
+description: A contextual feedback message for displaying important information, warnings, or status updates.
+---
+
+<ComponentPreview name="alert-demo" className="*:data-slot:max-w-lg *:data-slot:mx-auto">
+  <ComponentSource name="alert-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/alert.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="alert"
+    title="components/ui/alert.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+```
+
+```tsx
+<Alert>
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components to your app using the CLI.
+  </AlertDescription>
+</Alert>
+```
+
+## Examples
+
+### Outline
+
+<ComponentPreview name="alert-outline" className="*:data-slot:max-w-lg *:data-slot:mx-auto">
+  <ComponentSource name="alert-outline" />
+</ComponentPreview>
+
+### Destructive
+
+<ComponentPreview name="alert-destructive" className="*:data-slot:max-w-lg *:data-slot:mx-auto">
+  <ComponentSource name="alert-destructive" />
+</ComponentPreview>
+
+### Success
+
+<ComponentPreview name="alert-success" className="*:data-slot:max-w-lg *:data-slot:mx-auto">
+  <ComponentSource name="alert-success" />
+</ComponentPreview>
+
+### Info
+
+<ComponentPreview name="alert-info" className="*:data-slot:max-w-lg *:data-slot:mx-auto">
+  <ComponentSource name="alert-info" />
+</ComponentPreview>
+
+### Warning
+
+<ComponentPreview name="alert-warning" className="*:data-slot:max-w-lg *:data-slot:mx-auto">
+  <ComponentSource name="alert-warning" />
+</ComponentPreview>
