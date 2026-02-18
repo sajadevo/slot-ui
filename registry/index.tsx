@@ -598,6 +598,44 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/tabs/tabs-vertical.tsx",
   },
+  // Textarea
+  textarea: {
+    name: "textarea",
+    component: React.lazy(() =>
+      import("@/components/ui/textarea").then((mod) => ({
+        default: mod.Textarea,
+      })),
+    ),
+    file: "components/ui/textarea.tsx",
+  },
+  "textarea-demo": {
+    name: "textarea-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/textarea/textarea-demo"),
+    ),
+    file: "registry/examples/textarea/textarea-demo.tsx",
+  },
+  "textarea-sm": {
+    name: "textarea-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/textarea/textarea-sm"),
+    ),
+    file: "registry/examples/textarea/textarea-sm.tsx",
+  },
+  "textarea-lg": {
+    name: "textarea-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/textarea/textarea-lg"),
+    ),
+    file: "registry/examples/textarea/textarea-lg.tsx",
+  },
+  "textarea-disabled": {
+    name: "textarea-disabled",
+    component: React.lazy(
+      () => import("@/registry/examples/textarea/textarea-disabled"),
+    ),
+    file: "registry/examples/textarea/textarea-disabled.tsx",
+  },
   // Toggle
   toggle: {
     name: "toggle",

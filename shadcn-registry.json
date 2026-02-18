@@ -60,6 +60,7 @@
         "https://slot-ui.com/r/slider.json",
         "https://slot-ui.com/r/switch.json",
         "https://slot-ui.com/r/tabs.json",
+        "https://slot-ui.com/r/textarea.json",
         "https://slot-ui.com/r/toggle.json",
         "https://slot-ui.com/r/toggle-group.json",
         "https://slot-ui.com/r/tooltip.json"
@@ -454,6 +455,26 @@
           "path": "components/ui/tabs.tsx",
           "type": "registry:file",
           "target": "~/components/ui/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:item",
+      "title": "Textarea",
+      "description": "A multi-line text field for capturing longer user input, supporting multiple sizes and form integration.",
+      "dependencies": [
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/textarea.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/textarea.tsx"
         }
       ]
     },

@@ -65,7 +65,7 @@ function DialogPopup({
         >
           {children}
           {showCloseButton && (
-            <DialogClose className="ring-offset-background focus:ring-ring text-secondary-foreground not-disabled:hover:bg-accent absolute end-3 top-3 flex size-6 items-center justify-center rounded-full disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
+            <DialogClose className="ring-offset-background text-secondary-foreground not-disabled:hover:bg-accent absolute end-3 top-3 flex size-6 items-center justify-center rounded-full disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
               <XIcon />
               <span className="sr-only">Close</span>
             </DialogClose>

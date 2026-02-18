@@ -1,0 +1,59 @@
+---
+title: Textarea
+description: A multi-line text field for capturing longer user input, supporting multiple sizes and form integration.
+---
+
+<ComponentPreview name="textarea-demo" className="*:data-slot:max-w-md *:data-slot:mx-auto">
+  <ComponentSource name="textarea-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/textarea.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="textarea"
+    title="components/ui/textarea.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Textarea } from "@/components/ui/textarea";
+```
+
+```tsx
+<Textarea placeholder="Type your message" />
+```
+
+## Examples
+
+### Small
+
+<ComponentPreview name="textarea-sm" className="*:data-slot:max-w-md *:data-slot:mx-auto">
+  <ComponentSource name="textarea-sm" />
+</ComponentPreview>
+
+### Large
+
+<ComponentPreview name="textarea-lg" className="*:data-slot:max-w-md *:data-slot:mx-auto">
+  <ComponentSource name="textarea-lg" />
+</ComponentPreview>
+
+### Disabled
+
+<ComponentPreview name="textarea-disabled" className="*:data-slot:max-w-md *:data-slot:mx-auto">
+  <ComponentSource name="textarea-disabled" />
+</ComponentPreview>

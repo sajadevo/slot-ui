@@ -1,7 +1,8 @@
 // @ts-nocheck
-import * as __fd_glob_24 from "../content/docs/components/tooltip.mdx?collection=docs"
-import * as __fd_glob_23 from "../content/docs/components/toggle.mdx?collection=docs"
-import * as __fd_glob_22 from "../content/docs/components/toggle-group.mdx?collection=docs"
+import * as __fd_glob_25 from "../content/docs/components/tooltip.mdx?collection=docs"
+import * as __fd_glob_24 from "../content/docs/components/toggle.mdx?collection=docs"
+import * as __fd_glob_23 from "../content/docs/components/toggle-group.mdx?collection=docs"
+import * as __fd_glob_22 from "../content/docs/components/textarea.mdx?collection=docs"
 import * as __fd_glob_21 from "../content/docs/components/tabs.mdx?collection=docs"
 import * as __fd_glob_20 from "../content/docs/components/switch.mdx?collection=docs"
 import * as __fd_glob_19 from "../content/docs/components/slider.mdx?collection=docs"
@@ -32,4 +33,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {}, {"get-started.mdx": __fd_glob_0, "index.mdx": __fd_glob_1, "components/accordion.mdx": __fd_glob_2, "components/alert-dialog.mdx": __fd_glob_3, "components/alert.mdx": __fd_glob_4, "components/avatar.mdx": __fd_glob_5, "components/badge.mdx": __fd_glob_6, "components/button.mdx": __fd_glob_7, "components/checkbox-group.mdx": __fd_glob_8, "components/checkbox.mdx": __fd_glob_9, "components/collapsible.mdx": __fd_glob_10, "components/dialog.mdx": __fd_glob_11, "components/input.mdx": __fd_glob_12, "components/label.mdx": __fd_glob_13, "components/popover.mdx": __fd_glob_14, "components/progress.mdx": __fd_glob_15, "components/radio.mdx": __fd_glob_16, "components/separator.mdx": __fd_glob_17, "components/skeleton.mdx": __fd_glob_18, "components/slider.mdx": __fd_glob_19, "components/switch.mdx": __fd_glob_20, "components/tabs.mdx": __fd_glob_21, "components/toggle-group.mdx": __fd_glob_22, "components/toggle.mdx": __fd_glob_23, "components/tooltip.mdx": __fd_glob_24, });
+export const docs = await create.docs("docs", "content/docs", {}, {"get-started.mdx": __fd_glob_0, "index.mdx": __fd_glob_1, "components/accordion.mdx": __fd_glob_2, "components/alert-dialog.mdx": __fd_glob_3, "components/alert.mdx": __fd_glob_4, "components/avatar.mdx": __fd_glob_5, "components/badge.mdx": __fd_glob_6, "components/button.mdx": __fd_glob_7, "components/checkbox-group.mdx": __fd_glob_8, "components/checkbox.mdx": __fd_glob_9, "components/collapsible.mdx": __fd_glob_10, "components/dialog.mdx": __fd_glob_11, "components/input.mdx": __fd_glob_12, "components/label.mdx": __fd_glob_13, "components/popover.mdx": __fd_glob_14, "components/progress.mdx": __fd_glob_15, "components/radio.mdx": __fd_glob_16, "components/separator.mdx": __fd_glob_17, "components/skeleton.mdx": __fd_glob_18, "components/slider.mdx": __fd_glob_19, "components/switch.mdx": __fd_glob_20, "components/tabs.mdx": __fd_glob_21, "components/textarea.mdx": __fd_glob_22, "components/toggle-group.mdx": __fd_glob_23, "components/toggle.mdx": __fd_glob_24, "components/tooltip.mdx": __fd_glob_25, });
