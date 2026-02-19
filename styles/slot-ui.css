@@ -51,7 +51,7 @@
   --color-background: var(--color-neutral-950);
   --color-foreground: var(--color-neutral-200);
 
-  --color-card: var(--color-neutral-950);
+  --color-card: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
   --color-card-foreground: var(--color-neutral-200);
   --color-popover: var(--color-neutral-950);
   --color-popover-foreground: var(--color-neutral-200);

@@ -43,6 +43,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/button",
   },
   {
+    label: "Card",
+    href: "/docs/components/card",
+    tag: "new",
+  },
+  {
     label: "Checkbox",
     href: "/docs/components/checkbox",
   },

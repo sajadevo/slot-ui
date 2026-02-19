@@ -757,6 +757,20 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/tooltip/tooltip-demo.tsx",
   },
+  card: {
+    name: "card",
+    component: React.lazy(() =>
+      import("@/components/ui/card").then((mod) => ({ default: mod.Card })),
+    ),
+    file: "components/ui/card.tsx",
+  },
+  "card-demo": {
+    name: "card-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/card/card-demo"),
+    ),
+    file: "registry/examples/card/card-demo.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {
