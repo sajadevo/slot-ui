@@ -786,6 +786,23 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/field/field-demo.tsx",
   },
+  // Fieldset
+  fieldset: {
+    name: "fieldset",
+    component: React.lazy(() =>
+      import("@/components/ui/fieldset").then((mod) => ({
+        default: mod.Fieldset,
+      })),
+    ),
+    file: "components/ui/fieldset.tsx",
+  },
+  "fieldset-demo": {
+    name: "fieldset-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/fieldset/fieldset-demo"),
+    ),
+    file: "registry/examples/fieldset/fieldset-demo.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {

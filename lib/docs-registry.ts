@@ -68,6 +68,11 @@ const componentsRegistry: RegistryItem[] = [
     tag: "new",
   },
   {
+    label: "Fieldset",
+    href: "/docs/components/fieldset",
+    tag: "new",
+  },
+  {
     label: "Input",
     href: "/docs/components/input",
   },

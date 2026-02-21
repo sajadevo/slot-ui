@@ -50,6 +50,8 @@
         "https://slot-ui.com/r/checkbox.json",
         "https://slot-ui.com/r/collapsible.json",
         "https://slot-ui.com/r/dialog.json",
+        "https://slot-ui.com/r/field.json",
+        "https://slot-ui.com/r/fieldset.json",
         "https://slot-ui.com/r/input.json",
         "https://slot-ui.com/r/label.json",
         "https://slot-ui.com/r/popover.json",
@@ -256,6 +258,46 @@
           "path": "components/ui/dialog.tsx",
           "type": "registry:file",
           "target": "~/components/ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:item",
+      "title": "Field",
+      "description": "A form field wrapper that associates a label, control, description, and error message, providing accessible form inputs with built-in validation support.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/field.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "fieldset",
+      "type": "registry:item",
+      "title": "Fieldset",
+      "description": "A grouping container for related form fields, with a legend to label the group and built-in support for disabling all contained controls.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/fieldset.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/fieldset.tsx"
         }
       ]
     },

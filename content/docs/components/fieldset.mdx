@@ -1,0 +1,42 @@
+---
+title: Fieldset
+description: A grouping container for related form fields, with a legend to label the group and built-in support for disabling all contained controls.
+---
+
+<ComponentPreview name="fieldset-demo">
+  <ComponentSource name="fieldset-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/fieldset.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="fieldset"
+    title="components/ui/fieldset.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Fieldset, FieldsetLegend } from "@/components/ui/fieldset";
+```
+
+```tsx
+<Fieldset>
+  <FieldsetLegend>Personal Information</FieldsetLegend>
+  {/* fields */}
+</Fieldset>
+```
