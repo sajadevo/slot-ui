@@ -36,7 +36,6 @@ const componentsRegistry: RegistryItem[] = [
   {
     label: "Badge",
     href: "/docs/components/badge",
-    tag: "new",
   },
   {
     label: "Button",
@@ -62,6 +61,11 @@ const componentsRegistry: RegistryItem[] = [
   {
     label: "Dialog",
     href: "/docs/components/dialog",
+  },
+  {
+    label: "Field",
+    href: "/docs/components/field",
+    tag: "new",
   },
   {
     label: "Input",
