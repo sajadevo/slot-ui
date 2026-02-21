@@ -52,6 +52,7 @@
         "https://slot-ui.com/r/dialog.json",
         "https://slot-ui.com/r/field.json",
         "https://slot-ui.com/r/fieldset.json",
+        "https://slot-ui.com/r/form.json",
         "https://slot-ui.com/r/input.json",
         "https://slot-ui.com/r/label.json",
         "https://slot-ui.com/r/popover.json",
@@ -298,6 +299,27 @@
           "path": "components/ui/fieldset.tsx",
           "type": "registry:file",
           "target": "~/components/ui/fieldset.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:item",
+      "title": "Form",
+      "description": "A form container with built-in validation handling, associating fields with their error messages and managing submission state.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/field.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/form.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/form.tsx"
         }
       ]
     },

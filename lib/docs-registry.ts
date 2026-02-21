@@ -73,6 +73,11 @@ const componentsRegistry: RegistryItem[] = [
     tag: "new",
   },
   {
+    label: "Form",
+    href: "/docs/components/form",
+    tag: "new",
+  },
+  {
     label: "Input",
     href: "/docs/components/input",
   },

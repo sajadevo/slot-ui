@@ -803,6 +803,21 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/fieldset/fieldset-demo.tsx",
   },
+  // Form
+  form: {
+    name: "form",
+    component: React.lazy(() =>
+      import("@/components/ui/form").then((mod) => ({ default: mod.Form })),
+    ),
+    file: "components/ui/form.tsx",
+  },
+  "form-demo": {
+    name: "form-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/form/form-demo"),
+    ),
+    file: "registry/examples/form/form-demo.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {

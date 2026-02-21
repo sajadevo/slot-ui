@@ -1,0 +1,47 @@
+---
+title: Form
+description: A form container with built-in validation handling, associating fields with their error messages and managing submission state.
+---
+
+<ComponentPreview name="form-demo">
+  <ComponentSource name="form-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/form.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="form"
+    title="components/ui/form.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import { Form } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Field, FieldLabel, FieldError } from "@/components/ui/field";
+```
+
+```tsx
+<Form>
+  <Field>
+    <FieldLabel>Email</FieldLabel>
+    <Input type="email" required />
+    <FieldError>Please enter a valid email.</FieldError>
+  </Field>
+</Form>
+```
