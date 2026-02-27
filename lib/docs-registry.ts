@@ -91,6 +91,11 @@ const componentsRegistry: RegistryItem[] = [
     tag: "new",
   },
   {
+    label: "Meter",
+    href: "/docs/components/meter",
+    tag: "new",
+  },
+  {
     label: "Popover",
     href: "/docs/components/popover",
   },

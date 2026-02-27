@@ -950,6 +950,23 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/context-menu/context-menu-groups.tsx",
   },
+  // Meter
+  meter: {
+    name: "meter",
+    component: React.lazy(() =>
+      import("@/components/ui/meter").then((mod) => ({
+        default: mod.Meter as React.ComponentType,
+      })),
+    ),
+    file: "components/ui/meter.tsx",
+  },
+  "meter-demo": {
+    name: "meter-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/meter/meter-demo"),
+    ),
+    file: "registry/examples/meter/meter-demo.tsx",
+  },
   // Select
   select: {
     name: "select",

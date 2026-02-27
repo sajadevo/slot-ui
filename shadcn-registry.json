@@ -56,6 +56,7 @@
         "https://slot-ui.com/r/input.json",
         "https://slot-ui.com/r/label.json",
         "https://slot-ui.com/r/popover.json",
+        "https://slot-ui.com/r/meter.json",
         "https://slot-ui.com/r/progress.json",
         "https://slot-ui.com/r/radio.json",
         "https://slot-ui.com/r/select.json",
@@ -381,6 +382,26 @@
           "path": "components/ui/popover.tsx",
           "type": "registry:file",
           "target": "~/components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "meter",
+      "type": "registry:item",
+      "title": "Meter",
+      "description": "A visual indicator that represents a scalar value within a known range, such as disk usage or battery level.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/meter.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/meter.tsx"
         }
       ]
     },
