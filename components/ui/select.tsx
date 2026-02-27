@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import { Select as SelectPrimitive } from "@base-ui/react/select";
 import { cva, type VariantProps } from "class-variance-authority";
 import {
@@ -88,34 +90,96 @@ function SelectPopup({
         sideOffset={sideOffset}
       >
         <SelectPrimitive.Popup
-          className="origin-(--transform-origin) text-foreground bg-popover rounded-popover border corner-shape shadow-xs"
+          className="group origin-(--transform-origin) text-foreground bg-popover rounded-popover border corner-shape shadow-xs min-w-(--anchor-width) data-[side=none]:min-w-[calc(var(--anchor-width)+1rem)]"
           data-slot="select-popup"
           {...props}
         >
-          <SelectPrimitive.ScrollUpArrow
-            className="top-0 z-50 flex h-7 w-[calc(100%-2px)] translate-y-px cursor-default items-center justify-center rounded-t-[inherit] corner-shape bg-popover"
-            data-slot="select-scroll-up-arrow"
-          >
-            <ChevronUpIcon className="size-4" />
-          </SelectPrimitive.ScrollUpArrow>
+          <SelectScrollUpButton />
           <SelectPrimitive.List
             className={cn(
-              "max-h-(--available-height) min-w-(--anchor-width) overflow-y-auto p-1",
+              "max-h-(--available-height) overflow-y-auto p-1",
               className,
             )}
             data-slot="select-list"
           >
             {children}
           </SelectPrimitive.List>
-          <SelectPrimitive.ScrollDownArrow
-            className="bottom-0 z-50 flex h-7 w-[calc(100%-2px)] -translate-y-px cursor-default items-center justify-center rounded-b-[inherit] bg-popover corner-shape"
-            data-slot="select-scroll-down-arrow"
-          >
-            <ChevronDownIcon className="size-4" />
-          </SelectPrimitive.ScrollDownArrow>
+          <SelectScrollDownButton />
         </SelectPrimitive.Popup>
       </SelectPrimitive.Positioner>
     </SelectPrimitive.Portal>
+  );
+}
+
+function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
+  return (
+    <SelectPrimitive.Group
+      data-slot="select-group"
+      className={cn("scroll-my-1", className)}
+      {...props}
+    />
+  );
+}
+
+function SelectLabel({
+  className,
+  ...props
+}: SelectPrimitive.GroupLabel.Props) {
+  return (
+    <SelectPrimitive.GroupLabel
+      data-slot="select-label"
+      className={cn("text-muted-foreground px-1.5 py-1 text-xs font-medium", className)}
+      {...props}
+    />
+  );
+}
+
+function SelectSeparator({
+  className,
+  ...props
+}: SelectPrimitive.Separator.Props) {
+  return (
+    <SelectPrimitive.Separator
+      data-slot="select-separator"
+      className={cn("bg-border -mx-1 my-1 h-px", className)}
+      {...props}
+    />
+  );
+}
+
+function SelectScrollUpButton({
+  className,
+  ...props
+}: React.ComponentProps<typeof SelectPrimitive.ScrollUpArrow>) {
+  return (
+    <SelectPrimitive.ScrollUpArrow
+      data-slot="select-scroll-up-button"
+      className={cn(
+        "top-0 z-50 flex h-7 w-[calc(100%-2px)] translate-y-px cursor-default items-center justify-center rounded-t-[inherit] corner-shape bg-popover [&_svg:not([class*='size-'])]:size-4",
+        className,
+      )}
+      {...props}
+    >
+      <ChevronUpIcon />
+    </SelectPrimitive.ScrollUpArrow>
+  );
+}
+
+function SelectScrollDownButton({
+  className,
+  ...props
+}: React.ComponentProps<typeof SelectPrimitive.ScrollDownArrow>) {
+  return (
+    <SelectPrimitive.ScrollDownArrow
+      data-slot="select-scroll-down-button"
+      className={cn(
+        "bottom-0 z-50 flex h-7 w-[calc(100%-2px)] -translate-y-px cursor-default items-center justify-center rounded-b-[inherit] bg-popover corner-shape [&_svg:not([class*='size-'])]:size-4",
+        className,
+      )}
+      {...props}
+    >
+      <ChevronDownIcon />
+    </SelectPrimitive.ScrollDownArrow>
   );
 }
 
@@ -149,5 +213,10 @@ export {
   selectTriggerVariants,
   SelectValue,
   SelectPopup,
+  SelectGroup,
+  SelectLabel,
   SelectItem,
+  SelectSeparator,
+  SelectScrollUpButton,
+  SelectScrollDownButton,
 };

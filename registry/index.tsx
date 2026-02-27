@@ -922,6 +922,27 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/select/select-disabled.tsx",
   },
+  "select-group": {
+    name: "select-group",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-group"),
+    ),
+    file: "registry/examples/select/select-group.tsx",
+  },
+  "select-scrollable": {
+    name: "select-scrollable",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-scrollable"),
+    ),
+    file: "registry/examples/select/select-scrollable.tsx",
+  },
+  "select-invalid": {
+    name: "select-invalid",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-invalid"),
+    ),
+    file: "registry/examples/select/select-invalid.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {
