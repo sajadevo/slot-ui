@@ -1,0 +1,95 @@
+---
+title: Menu
+description: A dropdown menu component for displaying a list of actions or options, with support for submenus, checkboxes, radio groups, and keyboard shortcuts.
+---
+
+<ComponentPreview name="menu-demo" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/menu.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="menu"
+    title="components/ui/menu.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Menu,
+  MenuPopup,
+  MenuItem,
+  MenuTrigger,
+} from "@/components/ui/menu";
+```
+
+```tsx
+<Menu>
+  <MenuTrigger>Open</MenuTrigger>
+  <MenuPopup>
+    <MenuItem>Profile</MenuItem>
+    <MenuItem>Settings</MenuItem>
+    <MenuItem>Billing</MenuItem>
+  </MenuPopup>
+</Menu>
+```
+
+## Examples
+
+### With Submenu
+
+<ComponentPreview name="menu-submenu" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-submenu" />
+</ComponentPreview>
+
+### With Shortcut
+
+<ComponentPreview name="menu-shortcut" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-shortcut" />
+</ComponentPreview>
+
+### With Icon
+
+<ComponentPreview name="menu-icon" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-icon" />
+</ComponentPreview>
+
+### With Checkbox
+
+<ComponentPreview name="menu-checkbox" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-checkbox" />
+</ComponentPreview>
+
+### With Radio Group
+
+<ComponentPreview name="menu-radio" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-radio" />
+</ComponentPreview>
+
+### Destructive
+
+<ComponentPreview name="menu-destructive" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-destructive" />
+</ComponentPreview>
+
+### Group
+
+<ComponentPreview name="menu-group" className="*:data-slot:mx-auto">
+  <ComponentSource name="menu-group" />
+</ComponentPreview>

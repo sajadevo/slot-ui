@@ -426,6 +426,27 @@
       ]
     },
     {
+      "name": "menu",
+      "type": "registry:item",
+      "title": "Menu",
+      "description": "A dropdown menu for displaying a list of actions or options, with support for submenus, checkboxes, radio groups, and keyboard shortcuts.",
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/menu.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/menu.tsx"
+        }
+      ]
+    },
+    {
       "name": "select",
       "type": "registry:item",
       "title": "Select",

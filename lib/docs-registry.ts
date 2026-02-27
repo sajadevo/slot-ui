@@ -86,6 +86,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/label",
   },
   {
+    label: "Menu",
+    href: "/docs/components/menu",
+    tag: "new",
+  },
+  {
     label: "Popover",
     href: "/docs/components/popover",
   },

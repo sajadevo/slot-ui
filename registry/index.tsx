@@ -818,6 +818,72 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/form/form-demo.tsx",
   },
+  // Menu
+  menu: {
+    name: "menu",
+    component: React.lazy(() =>
+      import("@/components/ui/menu").then((mod) => ({
+        default: mod.Menu,
+      })),
+    ),
+    file: "components/ui/menu.tsx",
+  },
+  "menu-demo": {
+    name: "menu-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-demo"),
+    ),
+    file: "registry/examples/menu/menu-demo.tsx",
+  },
+  "menu-checkbox": {
+    name: "menu-checkbox",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-checkbox"),
+    ),
+    file: "registry/examples/menu/menu-checkbox.tsx",
+  },
+  "menu-radio": {
+    name: "menu-radio",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-radio"),
+    ),
+    file: "registry/examples/menu/menu-radio.tsx",
+  },
+  "menu-submenu": {
+    name: "menu-submenu",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-submenu"),
+    ),
+    file: "registry/examples/menu/menu-submenu.tsx",
+  },
+  "menu-group": {
+    name: "menu-group",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-group"),
+    ),
+    file: "registry/examples/menu/menu-group.tsx",
+  },
+  "menu-shortcut": {
+    name: "menu-shortcut",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-shortcut"),
+    ),
+    file: "registry/examples/menu/menu-shortcut.tsx",
+  },
+  "menu-icon": {
+    name: "menu-icon",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-icon"),
+    ),
+    file: "registry/examples/menu/menu-icon.tsx",
+  },
+  "menu-destructive": {
+    name: "menu-destructive",
+    component: React.lazy(
+      () => import("@/registry/examples/menu/menu-destructive"),
+    ),
+    file: "registry/examples/menu/menu-destructive.tsx",
+  },
   // Select
   select: {
     name: "select",
