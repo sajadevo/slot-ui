@@ -98,6 +98,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/radio",
   },
   {
+    label: "Select",
+    href: "/docs/components/select",
+    tag: "new",
+  },
+  {
     label: "Separator",
     href: "/docs/components/separator",
   },

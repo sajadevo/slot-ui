@@ -818,6 +818,44 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/form/form-demo.tsx",
   },
+  // Select
+  select: {
+    name: "select",
+    component: React.lazy(() =>
+      import("@/components/ui/select").then((mod) => ({
+        default: mod.Select,
+      })),
+    ),
+    file: "components/ui/select.tsx",
+  },
+  "select-demo": {
+    name: "select-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-demo"),
+    ),
+    file: "registry/examples/select/select-demo.tsx",
+  },
+  "select-sm": {
+    name: "select-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-sm"),
+    ),
+    file: "registry/examples/select/select-sm.tsx",
+  },
+  "select-lg": {
+    name: "select-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-lg"),
+    ),
+    file: "registry/examples/select/select-lg.tsx",
+  },
+  "select-disabled": {
+    name: "select-disabled",
+    component: React.lazy(
+      () => import("@/registry/examples/select/select-disabled"),
+    ),
+    file: "registry/examples/select/select-disabled.tsx",
+  },
 };
 
 export function getRegistryItem(name: string): RegistryItem | undefined {

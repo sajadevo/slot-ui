@@ -58,6 +58,7 @@
         "https://slot-ui.com/r/popover.json",
         "https://slot-ui.com/r/progress.json",
         "https://slot-ui.com/r/radio.json",
+        "https://slot-ui.com/r/select.json",
         "https://slot-ui.com/r/separator.json",
         "https://slot-ui.com/r/skeleton.json",
         "https://slot-ui.com/r/slider.json",
@@ -421,6 +422,28 @@
           "path": "components/ui/radio.tsx",
           "type": "registry:file",
           "target": "~/components/ui/radio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:item",
+      "title": "Select",
+      "description": "A dropdown control for choosing a single value from a list of options, with support for multiple sizes.",
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/select.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/select.tsx"
         }
       ]
     },
