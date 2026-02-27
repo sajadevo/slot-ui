@@ -23,7 +23,6 @@ const componentsRegistry: RegistryItem[] = [
   {
     label: "Alert",
     href: "/docs/components/alert",
-    tag: "new",
   },
   {
     label: "Alert Dialog",
@@ -44,7 +43,6 @@ const componentsRegistry: RegistryItem[] = [
   {
     label: "Card",
     href: "/docs/components/card",
-    tag: "new",
   },
   {
     label: "Checkbox",
@@ -70,17 +68,14 @@ const componentsRegistry: RegistryItem[] = [
   {
     label: "Field",
     href: "/docs/components/field",
-    tag: "new",
   },
   {
     label: "Fieldset",
     href: "/docs/components/fieldset",
-    tag: "new",
   },
   {
     label: "Form",
     href: "/docs/components/form",
-    tag: "new",
   },
   {
     label: "Input",
@@ -135,7 +130,6 @@ const componentsRegistry: RegistryItem[] = [
   {
     label: "Textarea",
     href: "/docs/components/textarea",
-    tag: "new",
   },
   {
     label: "Toggle",
