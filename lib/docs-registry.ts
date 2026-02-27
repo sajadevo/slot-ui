@@ -59,6 +59,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/collapsible",
   },
   {
+    label: "Context Menu",
+    href: "/docs/components/context-menu",
+    tag: "new",
+  },
+  {
     label: "Dialog",
     href: "/docs/components/dialog",
   },

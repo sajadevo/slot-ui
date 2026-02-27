@@ -1,0 +1,95 @@
+---
+title: Context Menu
+description: A menu that appears on right-click or long press, with support for submenus, checkboxes, radio groups, and keyboard shortcuts.
+---
+
+<ComponentPreview name="context-menu-demo">
+  <ComponentSource name="context-menu-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/context-menu.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="context-menu"
+    title="components/ui/context-menu.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuPopup,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu";
+```
+
+```tsx
+<ContextMenu>
+  <ContextMenuTrigger>Right click here</ContextMenuTrigger>
+  <ContextMenuPopup>
+    <ContextMenuItem>Profile</ContextMenuItem>
+    <ContextMenuItem>Settings</ContextMenuItem>
+    <ContextMenuItem>Billing</ContextMenuItem>
+  </ContextMenuPopup>
+</ContextMenu>
+```
+
+## Examples
+
+### With Submenu
+
+<ComponentPreview name="context-menu-submenu">
+  <ComponentSource name="context-menu-submenu" />
+</ComponentPreview>
+
+### With Shortcut
+
+<ComponentPreview name="context-menu-shortcut">
+  <ComponentSource name="context-menu-shortcut" />
+</ComponentPreview>
+
+### With Icon
+
+<ComponentPreview name="context-menu-icon">
+  <ComponentSource name="context-menu-icon" />
+</ComponentPreview>
+
+### With Checkbox
+
+<ComponentPreview name="context-menu-checkbox">
+  <ComponentSource name="context-menu-checkbox" />
+</ComponentPreview>
+
+### With Radio Group
+
+<ComponentPreview name="context-menu-radio">
+  <ComponentSource name="context-menu-radio" />
+</ComponentPreview>
+
+### Destructive
+
+<ComponentPreview name="context-menu-destructive">
+  <ComponentSource name="context-menu-destructive" />
+</ComponentPreview>
+
+### Groups
+
+<ComponentPreview name="context-menu-groups">
+  <ComponentSource name="context-menu-groups" />
+</ComponentPreview>

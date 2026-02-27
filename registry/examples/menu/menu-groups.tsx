@@ -11,7 +11,7 @@ import {
   MenuTrigger,
 } from "@/components/ui/menu";
 
-export default function MenuGroup_() {
+export default function MenuGroups() {
   return (
     <Menu>
       <MenuTrigger render={<Button variant="outline" />}>My Account</MenuTrigger>

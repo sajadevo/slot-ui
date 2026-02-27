@@ -856,12 +856,12 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/menu/menu-submenu.tsx",
   },
-  "menu-group": {
-    name: "menu-group",
+  "menu-groups": {
+    name: "menu-groups",
     component: React.lazy(
-      () => import("@/registry/examples/menu/menu-group"),
+      () => import("@/registry/examples/menu/menu-groups"),
     ),
-    file: "registry/examples/menu/menu-group.tsx",
+    file: "registry/examples/menu/menu-groups.tsx",
   },
   "menu-shortcut": {
     name: "menu-shortcut",
@@ -883,6 +883,72 @@ const examples: Record<string, RegistryItem> = {
       () => import("@/registry/examples/menu/menu-destructive"),
     ),
     file: "registry/examples/menu/menu-destructive.tsx",
+  },
+  // Context Menu
+  "context-menu": {
+    name: "context-menu",
+    component: React.lazy(() =>
+      import("@/components/ui/context-menu").then((mod) => ({
+        default: mod.ContextMenu,
+      })),
+    ),
+    file: "components/ui/context-menu.tsx",
+  },
+  "context-menu-demo": {
+    name: "context-menu-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-demo"),
+    ),
+    file: "registry/examples/context-menu/context-menu-demo.tsx",
+  },
+  "context-menu-submenu": {
+    name: "context-menu-submenu",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-submenu"),
+    ),
+    file: "registry/examples/context-menu/context-menu-submenu.tsx",
+  },
+  "context-menu-shortcut": {
+    name: "context-menu-shortcut",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-shortcut"),
+    ),
+    file: "registry/examples/context-menu/context-menu-shortcut.tsx",
+  },
+  "context-menu-icon": {
+    name: "context-menu-icon",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-icon"),
+    ),
+    file: "registry/examples/context-menu/context-menu-icon.tsx",
+  },
+  "context-menu-checkbox": {
+    name: "context-menu-checkbox",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-checkbox"),
+    ),
+    file: "registry/examples/context-menu/context-menu-checkbox.tsx",
+  },
+  "context-menu-radio": {
+    name: "context-menu-radio",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-radio"),
+    ),
+    file: "registry/examples/context-menu/context-menu-radio.tsx",
+  },
+  "context-menu-destructive": {
+    name: "context-menu-destructive",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-destructive"),
+    ),
+    file: "registry/examples/context-menu/context-menu-destructive.tsx",
+  },
+  "context-menu-groups": {
+    name: "context-menu-groups",
+    component: React.lazy(
+      () => import("@/registry/examples/context-menu/context-menu-groups"),
+    ),
+    file: "registry/examples/context-menu/context-menu-groups.tsx",
   },
   // Select
   select: {
