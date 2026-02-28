@@ -4,21 +4,21 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
-  "relative w-full corner-shape border rounded-alert border-transparent py-3 px-3.5 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-2.5 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current transition-all duration-200",
+  "relative w-full corner-shape border rounded-alert py-3 px-3.5 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-2.5 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current transition-all duration-200",
   {
     variants: {
       variant: {
         default: "bg-accent text-accent-foreground",
         destructive:
-          "bg-destructive/7 text-destructive *:data-[slot=alert-description]:text-destructive",
+          "bg-destructive/7 border-destructive/10 text-destructive *:data-[slot=alert-description]:text-destructive",
         success:
-          "bg-success/7 text-success *:data-[slot=alert-description]:text-success",
+          "bg-success/7 border-success/10 text-success *:data-[slot=alert-description]:text-success",
         info:
-          "bg-info/7 text-info *:data-[slot=alert-description]:text-info",
+          "bg-info/7 border-info/10 text-info *:data-[slot=alert-description]:text-info",
         warning:
-          "bg-warning/7 text-warning *:data-[slot=alert-description]:text-warning",
+          "bg-warning/7 border-warning/10 text-warning *:data-[slot=alert-description]:text-warning",
         outline:
-          "border-border bg-transparent text-foreground",
+          "bg-transparent text-foreground",
       },
     },
     defaultVariants: {

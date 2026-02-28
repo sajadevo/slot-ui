@@ -967,6 +967,65 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/meter/meter-demo.tsx",
   },
+  // Toast
+  toast: {
+    name: "toast",
+    component: React.lazy(() =>
+      import("@/components/ui/toast").then((mod) => ({
+        default: mod.ToastProvider,
+      })),
+    ),
+    file: "components/ui/toast.tsx",
+  },
+  "toast-demo": {
+    name: "toast-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-demo"),
+    ),
+    file: "registry/examples/toast/toast-demo.tsx",
+  },
+  "toast-success": {
+    name: "toast-success",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-success"),
+    ),
+    file: "registry/examples/toast/toast-success.tsx",
+  },
+  "toast-warning": {
+    name: "toast-warning",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-warning"),
+    ),
+    file: "registry/examples/toast/toast-warning.tsx",
+  },
+  "toast-info": {
+    name: "toast-info",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-info"),
+    ),
+    file: "registry/examples/toast/toast-info.tsx",
+  },
+  "toast-destructive": {
+    name: "toast-destructive",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-destructive"),
+    ),
+    file: "registry/examples/toast/toast-destructive.tsx",
+  },
+  "toast-loading": {
+    name: "toast-loading",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-loading"),
+    ),
+    file: "registry/examples/toast/toast-loading.tsx",
+  },
+  "toast-promise": {
+    name: "toast-promise",
+    component: React.lazy(
+      () => import("@/registry/examples/toast/toast-promise"),
+    ),
+    file: "registry/examples/toast/toast-promise.tsx",
+  },
   // Select
   select: {
     name: "select",

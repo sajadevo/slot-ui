@@ -68,6 +68,7 @@
         "https://slot-ui.com/r/textarea.json",
         "https://slot-ui.com/r/toggle.json",
         "https://slot-ui.com/r/toggle-group.json",
+        "https://slot-ui.com/r/toast.json",
         "https://slot-ui.com/r/tooltip.json"
       ],
       "files": []
@@ -689,6 +690,28 @@
           "path": "components/ui/tooltip.tsx",
           "type": "registry:file",
           "target": "~/components/ui/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:item",
+      "title": "Toast",
+      "description": "A notification that appears temporarily to provide feedback on an action or event.",
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toast.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/toast.tsx"
         }
       ]
     }

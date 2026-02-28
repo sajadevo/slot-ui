@@ -1,17 +1,19 @@
 // @ts-nocheck
-import * as __fd_glob_32 from "../content/docs/components/tooltip.mdx?collection=docs"
-import * as __fd_glob_31 from "../content/docs/components/toggle.mdx?collection=docs"
-import * as __fd_glob_30 from "../content/docs/components/toggle-group.mdx?collection=docs"
-import * as __fd_glob_29 from "../content/docs/components/textarea.mdx?collection=docs"
-import * as __fd_glob_28 from "../content/docs/components/tabs.mdx?collection=docs"
-import * as __fd_glob_27 from "../content/docs/components/switch.mdx?collection=docs"
-import * as __fd_glob_26 from "../content/docs/components/slider.mdx?collection=docs"
-import * as __fd_glob_25 from "../content/docs/components/skeleton.mdx?collection=docs"
-import * as __fd_glob_24 from "../content/docs/components/separator.mdx?collection=docs"
-import * as __fd_glob_23 from "../content/docs/components/select.mdx?collection=docs"
-import * as __fd_glob_22 from "../content/docs/components/radio.mdx?collection=docs"
-import * as __fd_glob_21 from "../content/docs/components/progress.mdx?collection=docs"
-import * as __fd_glob_20 from "../content/docs/components/popover.mdx?collection=docs"
+import * as __fd_glob_34 from "../content/docs/components/tooltip.mdx?collection=docs"
+import * as __fd_glob_33 from "../content/docs/components/toggle.mdx?collection=docs"
+import * as __fd_glob_32 from "../content/docs/components/toggle-group.mdx?collection=docs"
+import * as __fd_glob_31 from "../content/docs/components/toast.mdx?collection=docs"
+import * as __fd_glob_30 from "../content/docs/components/textarea.mdx?collection=docs"
+import * as __fd_glob_29 from "../content/docs/components/tabs.mdx?collection=docs"
+import * as __fd_glob_28 from "../content/docs/components/switch.mdx?collection=docs"
+import * as __fd_glob_27 from "../content/docs/components/slider.mdx?collection=docs"
+import * as __fd_glob_26 from "../content/docs/components/skeleton.mdx?collection=docs"
+import * as __fd_glob_25 from "../content/docs/components/separator.mdx?collection=docs"
+import * as __fd_glob_24 from "../content/docs/components/select.mdx?collection=docs"
+import * as __fd_glob_23 from "../content/docs/components/radio.mdx?collection=docs"
+import * as __fd_glob_22 from "../content/docs/components/progress.mdx?collection=docs"
+import * as __fd_glob_21 from "../content/docs/components/popover.mdx?collection=docs"
+import * as __fd_glob_20 from "../content/docs/components/meter.mdx?collection=docs"
 import * as __fd_glob_19 from "../content/docs/components/menu.mdx?collection=docs"
 import * as __fd_glob_18 from "../content/docs/components/label.mdx?collection=docs"
 import * as __fd_glob_17 from "../content/docs/components/input.mdx?collection=docs"
@@ -40,4 +42,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {}, {"get-started.mdx": __fd_glob_0, "index.mdx": __fd_glob_1, "components/accordion.mdx": __fd_glob_2, "components/alert-dialog.mdx": __fd_glob_3, "components/alert.mdx": __fd_glob_4, "components/avatar.mdx": __fd_glob_5, "components/badge.mdx": __fd_glob_6, "components/button.mdx": __fd_glob_7, "components/card.mdx": __fd_glob_8, "components/checkbox-group.mdx": __fd_glob_9, "components/checkbox.mdx": __fd_glob_10, "components/collapsible.mdx": __fd_glob_11, "components/context-menu.mdx": __fd_glob_12, "components/dialog.mdx": __fd_glob_13, "components/field.mdx": __fd_glob_14, "components/fieldset.mdx": __fd_glob_15, "components/form.mdx": __fd_glob_16, "components/input.mdx": __fd_glob_17, "components/label.mdx": __fd_glob_18, "components/menu.mdx": __fd_glob_19, "components/popover.mdx": __fd_glob_20, "components/progress.mdx": __fd_glob_21, "components/radio.mdx": __fd_glob_22, "components/select.mdx": __fd_glob_23, "components/separator.mdx": __fd_glob_24, "components/skeleton.mdx": __fd_glob_25, "components/slider.mdx": __fd_glob_26, "components/switch.mdx": __fd_glob_27, "components/tabs.mdx": __fd_glob_28, "components/textarea.mdx": __fd_glob_29, "components/toggle-group.mdx": __fd_glob_30, "components/toggle.mdx": __fd_glob_31, "components/tooltip.mdx": __fd_glob_32, });
+export const docs = await create.docs("docs", "content/docs", {}, {"get-started.mdx": __fd_glob_0, "index.mdx": __fd_glob_1, "components/accordion.mdx": __fd_glob_2, "components/alert-dialog.mdx": __fd_glob_3, "components/alert.mdx": __fd_glob_4, "components/avatar.mdx": __fd_glob_5, "components/badge.mdx": __fd_glob_6, "components/button.mdx": __fd_glob_7, "components/card.mdx": __fd_glob_8, "components/checkbox-group.mdx": __fd_glob_9, "components/checkbox.mdx": __fd_glob_10, "components/collapsible.mdx": __fd_glob_11, "components/context-menu.mdx": __fd_glob_12, "components/dialog.mdx": __fd_glob_13, "components/field.mdx": __fd_glob_14, "components/fieldset.mdx": __fd_glob_15, "components/form.mdx": __fd_glob_16, "components/input.mdx": __fd_glob_17, "components/label.mdx": __fd_glob_18, "components/menu.mdx": __fd_glob_19, "components/meter.mdx": __fd_glob_20, "components/popover.mdx": __fd_glob_21, "components/progress.mdx": __fd_glob_22, "components/radio.mdx": __fd_glob_23, "components/select.mdx": __fd_glob_24, "components/separator.mdx": __fd_glob_25, "components/skeleton.mdx": __fd_glob_26, "components/slider.mdx": __fd_glob_27, "components/switch.mdx": __fd_glob_28, "components/tabs.mdx": __fd_glob_29, "components/textarea.mdx": __fd_glob_30, "components/toast.mdx": __fd_glob_31, "components/toggle-group.mdx": __fd_glob_32, "components/toggle.mdx": __fd_glob_33, "components/tooltip.mdx": __fd_glob_34, });

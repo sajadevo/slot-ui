@@ -1,0 +1,94 @@
+---
+title: Toast
+description: A notification that appears temporarily to provide feedback on an action or event.
+---
+
+<ComponentPreview name="toast-demo">
+  <ComponentSource name="toast-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/toast.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="toast"
+    title="components/ui/toast.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+Add `ToastProvider` once at the root of your app, then use `toastManager` to trigger toasts from anywhere.
+
+```tsx
+import { ToastProvider } from "@/components/ui/toast";
+
+export default function RootLayout({ children }) {
+  return (
+    <html>
+      <body>
+        <ToastProvider>{children}</ToastProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+```tsx
+import { toastManager } from "@/components/ui/toast";
+
+toastManager.add({
+  title: "Event has been created",
+  description: "Monday, January 3rd at 6:00pm",
+});
+```
+
+## Examples
+
+### Success
+
+<ComponentPreview name="toast-success">
+  <ComponentSource name="toast-success" />
+</ComponentPreview>
+
+### Warning
+
+<ComponentPreview name="toast-warning">
+  <ComponentSource name="toast-warning" />
+</ComponentPreview>
+
+### Info
+
+<ComponentPreview name="toast-info">
+  <ComponentSource name="toast-info" />
+</ComponentPreview>
+
+### Destructive
+
+<ComponentPreview name="toast-destructive">
+  <ComponentSource name="toast-destructive" />
+</ComponentPreview>
+
+### Loading
+
+<ComponentPreview name="toast-loading">
+  <ComponentSource name="toast-loading" />
+</ComponentPreview>
+
+### Promise
+
+<ComponentPreview name="toast-promise">
+  <ComponentSource name="toast-promise" />
+</ComponentPreview>

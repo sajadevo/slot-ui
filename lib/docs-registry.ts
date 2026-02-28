@@ -137,6 +137,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/textarea",
   },
   {
+    label: "Toast",
+    href: "/docs/components/toast",
+    tag: "new",
+  },
+  {
     label: "Toggle",
     href: "/docs/components/toggle",
   },

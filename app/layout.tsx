@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ToastProvider } from "@/components/ui/toast";
 
 import { siteConfig } from "@/lib/config";
 
@@ -55,7 +56,9 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
         >
-          <div className="root">{children}</div>
+          <ToastProvider>
+            <div className="root">{children}</div>
+          </ToastProvider>
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID!} />
