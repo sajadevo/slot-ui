@@ -496,6 +496,23 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/popover/popover-demo.tsx",
   },
+  // Preview Card
+  "preview-card": {
+    name: "preview-card",
+    component: React.lazy(() =>
+      import("@/components/ui/preview-card").then((mod) => ({
+        default: mod.PreviewCard,
+      })),
+    ),
+    file: "components/ui/preview-card.tsx",
+  },
+  "preview-card-demo": {
+    name: "preview-card-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/preview-card/preview-card-demo"),
+    ),
+    file: "registry/examples/preview-card/preview-card-demo.tsx",
+  },
   // Progress
   progress: {
     name: "progress",

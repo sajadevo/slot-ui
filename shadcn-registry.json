@@ -57,6 +57,7 @@
         "https://slot-ui.com/r/input.json",
         "https://slot-ui.com/r/label.json",
         "https://slot-ui.com/r/popover.json",
+        "https://slot-ui.com/r/preview-card.json",
         "https://slot-ui.com/r/meter.json",
         "https://slot-ui.com/r/number-field.json",
         "https://slot-ui.com/r/progress.json",
@@ -402,6 +403,26 @@
           "path": "components/ui/popover.tsx",
           "type": "registry:file",
           "target": "~/components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "preview-card",
+      "type": "registry:item",
+      "title": "Preview Card",
+      "description": "A floating card that previews content on hover, anchored to a trigger element.",
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/preview-card.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/preview-card.tsx"
         }
       ]
     },

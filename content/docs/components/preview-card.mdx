@@ -1,0 +1,48 @@
+---
+title: Preview Card
+description: A floating card that previews content on hover, anchored to a trigger element.
+---
+
+<ComponentPreview name="preview-card-demo">
+  <ComponentSource name="preview-card-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/preview-card.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="preview-card"
+    title="components/ui/preview-card.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  PreviewCard,
+  PreviewCardTrigger,
+  PreviewCardPopup,
+} from "@/components/ui/preview-card";
+```
+
+```tsx
+<PreviewCard>
+  <PreviewCardTrigger>Hover me</PreviewCardTrigger>
+  <PreviewCardPopup>
+    Preview content
+  </PreviewCardPopup>
+</PreviewCard>
+```

@@ -105,6 +105,11 @@ const componentsRegistry: RegistryItem[] = [
     href: "/docs/components/popover",
   },
   {
+    label: "Preview Card",
+    href: "/docs/components/preview-card",
+    tag: "new",
+  },
+  {
     label: "Progress",
     href: "/docs/components/progress",
   },
