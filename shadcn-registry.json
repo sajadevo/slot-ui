@@ -57,6 +57,7 @@
         "https://slot-ui.com/r/label.json",
         "https://slot-ui.com/r/popover.json",
         "https://slot-ui.com/r/meter.json",
+        "https://slot-ui.com/r/number-field.json",
         "https://slot-ui.com/r/progress.json",
         "https://slot-ui.com/r/radio.json",
         "https://slot-ui.com/r/select.json",
@@ -403,6 +404,28 @@
           "path": "components/ui/meter.tsx",
           "type": "registry:file",
           "target": "~/components/ui/meter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:item",
+      "title": "Number Field",
+      "description": "A numeric input with increment and decrement controls, supporting keyboard, scroll, and scrub interactions.",
+      "dependencies": [
+        "@base-ui/react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "https://slot-ui.com/r/theme.json",
+        "https://slot-ui.com/r/utils.json",
+        "https://slot-ui.com/r/label.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/number-field.tsx",
+          "type": "registry:file",
+          "target": "~/components/ui/number-field.tsx"
         }
       ]
     },

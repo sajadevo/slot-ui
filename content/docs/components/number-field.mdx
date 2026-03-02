@@ -1,0 +1,67 @@
+---
+title: Number Field
+description: A numeric input with increment and decrement controls, supporting keyboard, scroll, and scrub interactions.
+---
+
+<ComponentPreview name="number-field-demo" className="*:data-slot:max-w-xs *:data-slot:mx-auto">
+  <ComponentSource name="number-field-demo" />
+</ComponentPreview>
+
+## Installation
+
+<Tabs>
+<TabsList>
+  <TabsTab value="cli">Command</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+```bash
+npx shadcn@latest add https://slot-ui.com/r/number-field.json
+```
+</TabsPanel>
+<TabsPanel value="manual">
+  <ComponentSource
+    name="number-field"
+    title="components/ui/number-field.tsx"
+    withHeader
+  />
+</TabsPanel>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  NumberField,
+  NumberFieldDecrement,
+  NumberFieldGroup,
+  NumberFieldIncrement,
+  NumberFieldInput,
+  NumberFieldScrubArea,
+} from "@/components/ui/number-field";
+```
+
+```tsx
+<NumberField defaultValue={10} min={0} max={100}>
+  <NumberFieldScrubArea label="Quantity" />
+  <NumberFieldGroup>
+    <NumberFieldDecrement />
+    <NumberFieldInput />
+    <NumberFieldIncrement />
+  </NumberFieldGroup>
+</NumberField>
+```
+
+## Examples
+
+### Small
+
+<ComponentPreview name="number-field-sm" className="*:data-slot:max-w-xs *:data-slot:mx-auto">
+  <ComponentSource name="number-field-sm" />
+</ComponentPreview>
+
+### Large
+
+<ComponentPreview name="number-field-lg" className="*:data-slot:max-w-xs *:data-slot:mx-auto">
+  <ComponentSource name="number-field-lg" />
+</ComponentPreview>

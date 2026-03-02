@@ -431,6 +431,37 @@ const examples: Record<string, RegistryItem> = {
     ),
     file: "registry/examples/input/input-lg.tsx",
   },
+  // Number Field
+  "number-field": {
+    name: "number-field",
+    component: React.lazy(() =>
+      import("@/components/ui/number-field").then((mod) => ({
+        default: mod.NumberField,
+      })),
+    ),
+    file: "components/ui/number-field.tsx",
+  },
+  "number-field-demo": {
+    name: "number-field-demo",
+    component: React.lazy(
+      () => import("@/registry/examples/number-field/number-field-demo"),
+    ),
+    file: "registry/examples/number-field/number-field-demo.tsx",
+  },
+  "number-field-sm": {
+    name: "number-field-sm",
+    component: React.lazy(
+      () => import("@/registry/examples/number-field/number-field-sm"),
+    ),
+    file: "registry/examples/number-field/number-field-sm.tsx",
+  },
+  "number-field-lg": {
+    name: "number-field-lg",
+    component: React.lazy(
+      () => import("@/registry/examples/number-field/number-field-lg"),
+    ),
+    file: "registry/examples/number-field/number-field-lg.tsx",
+  },
   // Label
   label: {
     name: "label",
